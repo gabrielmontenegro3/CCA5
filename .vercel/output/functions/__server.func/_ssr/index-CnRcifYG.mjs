@@ -33,16 +33,6 @@ function Navbar() {
 }
 const heroBg = "/assets/hero-bg-DkW7QQkX.jpg";
 function Hero() {
-  const [playing, setPlaying] = reactExports.useState(false);
-  const [slot, setSlot] = reactExports.useState(0);
-  const slots = [
-    "01 / Diagnóstico técnico",
-    "02 / Resultado mensurável"
-  ];
-  reactExports.useEffect(() => {
-    const id = setInterval(() => setSlot((s) => (s + 1) % slots.length), 3200);
-    return () => clearInterval(id);
-  }, []);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "section",
     {
@@ -106,70 +96,25 @@ function Hero() {
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6 relative", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -inset-8 bg-cyan-electric/20 rounded-3xl blur-3xl -z-10 animate-pulse" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-1/2 -right-10 w-32 h-32 bg-blue-soft/30 rounded-full blur-3xl -z-10" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative rounded-2xl overflow-hidden glass-dark shadow-2xl shadow-deep/60", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between px-4 py-2.5 border-b border-cream/10", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1.5", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-cream/20" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-cream/20" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-cyan-electric" })
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[10px] uppercase tracking-[0.2em] text-cream/60", children: "cca · institucional · 02:14" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 text-right font-mono text-[10px] text-cream/50", children: "HD" })
-              ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative aspect-video bg-gradient-to-br from-ink via-deep to-deep", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-dark opacity-40" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 gradient-aurora" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "video",
-                  {
-                    className: "absolute inset-0 w-full h-full object-cover opacity-0",
-                    playsInline: true,
-                    muted: true,
-                    loop: true,
-                    "aria-hidden": true
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid place-items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "button",
-                    {
-                      onClick: () => setPlaying((p) => !p),
-                      className: "relative inline-flex items-center justify-center w-20 h-20 rounded-full bg-cyan-electric text-deep hover:scale-110 transition-transform ring-pulse glow-accent",
-                      "aria-label": "Reproduzir vídeo",
-                      children: playing ? /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-2xl", children: "❚❚" }) : /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-2xl translate-x-0.5", children: "▶" })
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 font-mono text-[11px] uppercase tracking-[0.3em] text-cream/65", children: "Espaço reservado para vídeo" })
-                ] }) }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute bottom-4 left-4 right-4 flex items-center justify-between", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "px-3 py-1.5 rounded-md glass-dark font-mono text-[10px] uppercase tracking-[0.2em] text-cream/85", children: slots[slot] }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-1", children: slots.map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "span",
-                    {
-                      className: `h-0.5 transition-all ${i === slot ? "w-6 bg-cyan-electric" : "w-3 bg-cream/30"}`
-                    },
-                    i
-                  )) })
-                ] })
-              ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-3 divide-x divide-cream/10 border-t border-cream/10", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-4 py-3", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[9px] uppercase tracking-widest text-cream/45", children: "Status" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-cream text-sm font-medium mt-0.5 flex items-center gap-2", children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-cyan-electric animate-pulse" }),
-                    "Operacional"
-                  ] })
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-4 py-3", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[9px] uppercase tracking-widest text-cream/45", children: "Demandas" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-cream text-sm font-medium mt-0.5", children: "128 ativas" })
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-4 py-3", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[9px] uppercase tracking-widest text-cream/45", children: "SLA" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-cyan-electric text-sm font-medium mt-0.5", children: "98,4%" })
-                ] })
-              ] })
-            ] })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative rounded-2xl overflow-hidden border border-cream/10 bg-deep/30 backdrop-blur-sm shadow-2xl shadow-deep/60", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative aspect-video bg-ink", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 gradient-aurora opacity-60 pointer-events-none" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-tr from-deep/40 via-transparent to-transparent pointer-events-none" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "video",
+                {
+                  className: "relative z-[1] w-full h-full object-cover",
+                  src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+                  poster: heroBg,
+                  controls: true,
+                  playsInline: true,
+                  muted: true,
+                  loop: true,
+                  autoPlay: true,
+                  preload: "metadata"
+                }
+              )
+            ] }) })
           ] })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-cream/60", children: [
