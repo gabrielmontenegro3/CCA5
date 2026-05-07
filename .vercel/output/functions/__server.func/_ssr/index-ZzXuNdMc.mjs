@@ -1,0 +1,818 @@
+import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
+const logoCCA = "/assets/logo%20cca%20collor%20(1)-DD9JaQTH.png";
+function Navbar() {
+  const [scrolled, setScrolled] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "header",
+    {
+      className: `fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "bg-deep/80 backdrop-blur-xl border-b border-cream/10" : "bg-transparent"}`,
+      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 h-16 grid grid-cols-[1fr_auto_1fr] items-center", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", {}),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#top", className: "justify-self-center", "aria-label": "Voltar ao topo", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoCCA, alt: "CCA", className: "h-8 w-auto" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "a",
+          {
+            href: "#contato",
+            className: "justify-self-end inline-flex items-center gap-2 text-xs sm:text-sm font-medium px-3 sm:px-4 py-2 rounded-md bg-cyan-electric text-deep hover:opacity-90 hover:-translate-y-0.5 transition-all whitespace-nowrap",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "sm:hidden", children: "Conversa" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "hidden sm:inline", children: "Vale a conversa" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { "aria-hidden": true, children: "→" })
+            ]
+          }
+        )
+      ] })
+    }
+  );
+}
+const heroBg = "/assets/hero-bg-DkW7QQkX.jpg";
+function Hero() {
+  const [playing, setPlaying] = reactExports.useState(false);
+  const [slot, setSlot] = reactExports.useState(0);
+  const slots = [
+    "01 / Diagnóstico técnico",
+    "02 / Resultado mensurável"
+  ];
+  reactExports.useEffect(() => {
+    const id = setInterval(() => setSlot((s) => (s + 1) % slots.length), 3200);
+    return () => clearInterval(id);
+  }, []);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "section",
+    {
+      id: "top",
+      className: "relative min-h-dvh pt-16 pb-16 overflow-hidden grain text-cream bg-deep isolate",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "img",
+          {
+            src: heroBg,
+            alt: "Estrutura de torre em construção ao crepúsculo, vista cinemática",
+            className: "w-full h-full object-cover",
+            width: 1920,
+            height: 1080,
+            fetchPriority: "high"
+          }
+        ) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] bg-deep/70" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] gradient-hero pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] gradient-aurora pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "div",
+          {
+            className: "absolute inset-0 z-[1] grid-bg-dark opacity-40 pointer-events-none",
+            style: { animation: "grid-pan 24s linear infinite" }
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-x-0 bottom-0 z-[1] h-px bg-gradient-to-r from-transparent via-cyan-electric/30 to-transparent pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-x-0 bottom-0 z-[1] h-10 bg-gradient-to-b from-cyan-electric/10 to-transparent pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-8 lg:pt-14 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "font-display text-[2.4rem] sm:text-5xl lg:text-6xl xl:text-[4.75rem] font-medium leading-[0.98] tracking-tight text-balance", children: [
+              "Gestão técnica que transforma a",
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "garantia predial" }),
+              " em controle e previsibilidade."
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-7 text-lg lg:text-xl text-cream/80 max-w-xl leading-relaxed", children: "Estruturamos a pós-obra com critérios técnicos, padronização e rastreabilidade — do chamado ao fechamento, com evidências e histórico auditável." }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-9 flex flex-col sm:flex-row gap-3", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                "a",
+                {
+                  href: "#contato",
+                  className: "group inline-flex items-center justify-center gap-2 px-7 py-4 rounded-md bg-cyan-electric text-deep font-medium glow-accent hover:-translate-y-0.5 transition-all",
+                  children: [
+                    "Agendar conversa",
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "transition-transform group-hover:translate-x-1", children: "→" })
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "a",
+                {
+                  href: "#contato",
+                  className: "inline-flex items-center justify-center gap-2 px-7 py-4 rounded-md glass text-cream hover:bg-cream/10 transition-colors",
+                  children: "Solicitar demonstração"
+                }
+              )
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6 relative", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -inset-8 bg-cyan-electric/20 rounded-3xl blur-3xl -z-10 animate-pulse" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-1/2 -right-10 w-32 h-32 bg-blue-soft/30 rounded-full blur-3xl -z-10" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative rounded-2xl overflow-hidden glass-dark shadow-2xl shadow-deep/60", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between px-4 py-2.5 border-b border-cream/10", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-1.5", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-cream/20" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-cream/20" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2.5 h-2.5 rounded-full bg-cyan-electric" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[10px] uppercase tracking-[0.2em] text-cream/60", children: "cca · institucional · 02:14" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-12 text-right font-mono text-[10px] text-cream/50", children: "HD" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative aspect-video bg-gradient-to-br from-ink via-deep to-deep", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-dark opacity-40" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 gradient-aurora" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "video",
+                  {
+                    className: "absolute inset-0 w-full h-full object-cover opacity-0",
+                    playsInline: true,
+                    muted: true,
+                    loop: true,
+                    "aria-hidden": true
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid place-items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "button",
+                    {
+                      onClick: () => setPlaying((p) => !p),
+                      className: "relative inline-flex items-center justify-center w-20 h-20 rounded-full bg-cyan-electric text-deep hover:scale-110 transition-transform ring-pulse glow-accent",
+                      "aria-label": "Reproduzir vídeo",
+                      children: playing ? /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-2xl", children: "❚❚" }) : /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-2xl translate-x-0.5", children: "▶" })
+                    }
+                  ),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 font-mono text-[11px] uppercase tracking-[0.3em] text-cream/65", children: "Espaço reservado para vídeo" })
+                ] }) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute bottom-4 left-4 right-4 flex items-center justify-between", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "px-3 py-1.5 rounded-md glass-dark font-mono text-[10px] uppercase tracking-[0.2em] text-cream/85", children: slots[slot] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex gap-1", children: slots.map((_, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "span",
+                    {
+                      className: `h-0.5 transition-all ${i === slot ? "w-6 bg-cyan-electric" : "w-3 bg-cream/30"}`
+                    },
+                    i
+                  )) })
+                ] })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-3 divide-x divide-cream/10 border-t border-cream/10", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-4 py-3", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[9px] uppercase tracking-widest text-cream/45", children: "Status" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-cream text-sm font-medium mt-0.5 flex items-center gap-2", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-cyan-electric animate-pulse" }),
+                    "Operacional"
+                  ] })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-4 py-3", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[9px] uppercase tracking-widest text-cream/45", children: "Demandas" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-cream text-sm font-medium mt-0.5", children: "128 ativas" })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-4 py-3", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[9px] uppercase tracking-widest text-cream/45", children: "SLA" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-cyan-electric text-sm font-medium mt-0.5", children: "98,4%" })
+                ] })
+              ] })
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-cream/60", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-mono text-[10px] uppercase tracking-[0.35em]", children: "Role" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-px h-10 bg-gradient-to-b from-cyan-electric to-transparent" })
+        ] })
+      ]
+    }
+  );
+}
+function useReveal() {
+  const ref = reactExports.useRef(null);
+  reactExports.useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+  return ref;
+}
+const industrialImg = "/assets/industrial-CcFzInZu.jpg";
+const fieldImg = "/assets/field-CVNL-Tsb.jpg";
+function Eyebrow({ n, label }) {
+  return null;
+}
+function Problema() {
+  const ref = useReveal();
+  const items = [
+    { n: "01", t: "Respostas lentas", d: "Chamados parados em SAC sem suporte técnico especializado." },
+    { n: "02", t: "Retrabalho constante", d: "Equipes operam em ciclos repetidos de correção." },
+    { n: "03", t: "Falta de padrão", d: "Cada caso conduzido de forma improvisada e sem método." },
+    { n: "04", t: "Baixa assertividade", d: "Laudos divergentes comprometem a decisão técnica." },
+    { n: "05", t: "Custos aumentando", d: "Operação sem controle vira prejuízo invisível no balanço." }
+  ];
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "section",
+    {
+      id: "problema",
+      ref,
+      className: "reveal py-28 lg:py-36 relative bg-background overflow-hidden",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-light opacity-60 pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative max-w-7xl mx-auto px-6 lg:px-10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid lg:grid-cols-12 gap-10 items-start", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-5", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "02", label: "O problema" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-foreground text-balance", children: [
+              "Sua pós-obra está",
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "fora de controle" }),
+              "?"
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "mt-6 text-lg text-muted-foreground leading-relaxed", children: [
+              "Após a entrega, chamados caem em SAC ou assistência técnica — áreas sem suporte técnico especializado e sem metodologia.",
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-foreground font-medium", children: "A garantia predial vira um processo reativo e desorganizado." })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-7 lg:col-start-6", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid sm:grid-cols-2 lg:grid-cols-2 gap-3", children: items.map((it, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "div",
+            {
+              className: `relative overflow-hidden p-7 rounded-xl bg-deep text-cream border border-cream/10 hover:bg-ink hover:border-cyan-electric/30 hover:-translate-y-1 transition-all group ${idx === items.length - 1 ? "sm:col-span-2" : ""}`,
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 gradient-aurora opacity-70 pointer-events-none" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-deep/40 via-transparent to-transparent pointer-events-none" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start justify-between mb-3", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative font-display text-xl lg:text-2xl text-cream leading-tight", children: it.t }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative font-mono text-[10px] text-cream/60", children: it.n })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "relative text-sm text-cream/70 leading-relaxed", children: it.d }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative mt-5 h-0.5 bg-cream/15 rounded-full overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-full bg-cyan-electric w-0 group-hover:w-full transition-all duration-700" }) })
+              ]
+            },
+            it.n
+          )) }) })
+        ] }) })
+      ]
+    }
+  );
+}
+function Solucao() {
+  const ref = useReveal();
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "section",
+    {
+      id: "pilares",
+      ref,
+      className: "reveal py-28 lg:py-40 bg-background relative overflow-hidden",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-light opacity-55 pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-24 -right-24 w-[500px] h-[500px] bg-cyan-electric/15 rounded-full blur-3xl" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-blue-soft/15 rounded-full blur-3xl" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-7", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "05", label: "Pilares da metodologia" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-5xl lg:text-7xl xl:text-8xl font-medium leading-[0.98] tracking-tight text-balance text-foreground", children: [
+              "Método aplicado para operar com",
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "governança técnica" }),
+              "."
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-8 text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed", children: "Quatro pilares orientam processos, registros e decisões — garantindo padronização, rastreabilidade e indicadores que sustentam a gestão do pós-obra." })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-5 grid grid-cols-2 gap-3", children: [
+            { k: "Pilar 01", v: "Controlado" },
+            { k: "Pilar 02", v: "Padronizado" },
+            { k: "Pilar 03", v: "Rastreável" },
+            { k: "Pilar 04", v: "Orientado por dados" }
+          ].map((it) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "div",
+            {
+              className: "relative overflow-hidden p-6 lg:p-8 rounded-xl bg-deep text-cream border border-cream/10 hover:bg-ink hover:border-cyan-electric/30 transition-colors group min-h-[110px] lg:min-h-[140px]",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 gradient-aurora opacity-70 pointer-events-none" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-deep/40 via-transparent to-transparent pointer-events-none" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative font-mono text-[10px] lg:text-[11px] uppercase tracking-[0.25em] text-cyan-electric mb-2", children: it.k }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative font-display text-xl lg:text-3xl text-cream leading-[1.05] tracking-tight", children: it.v })
+              ]
+            },
+            it.k
+          )) })
+        ] })
+      ]
+    }
+  );
+}
+function Plataforma() {
+  const ref = useReveal();
+  const items = [
+    { t: "Controle total das ocorrências", d: "Cada caso registrado, classificado e acompanhado do início ao fim." },
+    { t: "Padronização dos processos", d: "Metodologia única aplicada a toda a operação." },
+    { t: "Diagnósticos assertivos", d: "Análise técnica baseada em evidências e histórico." },
+    { t: "Decisões com base sólida", d: "Cada decisão sustentada por dados rastreáveis." },
+    { t: "Visão completa do ativo", d: "Painel integrado com a saúde técnica do empreendimento." }
+  ];
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "section",
+    {
+      id: "solucao",
+      ref,
+      className: "reveal py-28 lg:py-36 bg-deep text-cream relative overflow-hidden",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-dark opacity-25 pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-electric/10 rounded-full blur-3xl" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cream/15 to-transparent opacity-70" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cream/6 to-transparent" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-5", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "04", label: "A solução" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance", children: [
+              "Gestão Técnica da",
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "Garantia Predial" }),
+              "."
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg text-cream/75 leading-relaxed", children: "Estruturamos todo o pós-obra com metodologia técnica e uma plataforma digital integrada que organiza cada etapa da operação." }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 inline-flex items-center gap-3 px-4 py-2 rounded-full glass-dark border border-cream/10 text-sm", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-2 h-2 rounded-full bg-cyan-electric animate-pulse" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-mono text-[10px] uppercase tracking-[0.25em] text-cream/75", children: "Metodologia + plataforma CCA" })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-7 grid sm:grid-cols-2 gap-3", children: items.map((it, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "div",
+            {
+              className: `p-7 rounded-xl glass border border-cream/10 hover:bg-cream/10 hover:-translate-y-1 transition-all group ${i === 0 ? "sm:col-span-2" : ""}`,
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start justify-between mb-3", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-display text-xl lg:text-2xl text-cream leading-tight", children: it.t }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-mono text-[10px] text-cream/60", children: String(i + 1).padStart(2, "0") })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-cream/70 leading-relaxed", children: it.d }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-5 h-0.5 bg-cream/15 rounded-full overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-full bg-cyan-electric w-0 group-hover:w-full transition-all duration-700" }) })
+              ]
+            },
+            it.t
+          )) })
+        ] })
+      ]
+    }
+  );
+}
+function Fluxo() {
+  const ref = useReveal();
+  const steps = [
+    "Demanda",
+    "Registro",
+    "Triagem",
+    "Planejamento",
+    "Inspeção",
+    "Diagnóstico",
+    "Solução técnica",
+    "Laudo",
+    "Fechamento"
+  ];
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "section",
+    {
+      id: "fluxo",
+      ref,
+      className: "reveal py-28 lg:py-36 bg-deep text-cream relative overflow-hidden",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 gradient-aurora opacity-70 pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative max-w-7xl mx-auto px-6 lg:px-10", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center max-w-3xl mx-auto mb-20", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "04", label: "Fluxo operacional" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance", children: [
+              "Um processo claro, do",
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "início ao fim" }),
+              "."
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-cream/75 text-lg", children: "Cada etapa é controlada, documentada e integrada — sem improviso." })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/40 to-transparent hidden lg:block" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("ol", { className: "sm:hidden relative", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute left-3 top-2 bottom-2 border-l border-dashed border-border/70" }),
+              steps.map((s, i) => {
+                const flip = i % 2 === 1;
+                const n = String(i + 1).padStart(2, "0");
+                return /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "relative py-2", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-cyan-electric shadow-[0_0_0_4px_oklch(0.78_0.15_220/0.10)]" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative px-9", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                      "div",
+                      {
+                        className: `relative overflow-hidden rounded-2xl bg-deep border border-cream/10 shadow-[0_1px_2px_oklch(0.16_0.04_250/0.10),0_18px_36px_oklch(0.16_0.04_250/0.18)] h-16 flex items-center ${flip ? "flex-row-reverse text-right" : "flex-row text-left"}`,
+                        children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-dark opacity-35 pointer-events-none" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 gradient-aurora opacity-80 pointer-events-none" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-r from-deep/60 via-deep/80 to-ink/60 pointer-events-none" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-w-0 flex-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                            "div",
+                            {
+                              className: `relative font-display text-[1.02rem] text-cream font-semibold leading-tight truncate ${flip ? "pr-12 pl-5" : "pl-12 pr-5"}`,
+                              children: s
+                            }
+                          ) })
+                        ]
+                      }
+                    ),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      "div",
+                      {
+                        className: `pointer-events-none absolute top-1/2 -translate-y-1/2 z-20 ${flip ? "-right-2" : "-left-2"}`,
+                        children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative w-14 h-14 rounded-full bg-deep/90 backdrop-blur border-[3px] border-cyan-electric/55 shadow-[0_0_0_1px_oklch(0.78_0.15_220/0.22),0_18px_38px_oklch(0.16_0.04_250/0.18)] grid place-items-center", children: [
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -inset-2 rounded-full bg-cyan-electric/15 blur-md" }),
+                          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative font-display text-[15px] tracking-tight text-cyan-electric drop-shadow-[0_1px_0_oklch(0.98_0.005_240/0.7)]", children: n })
+                        ] })
+                      }
+                    )
+                  ] })
+                ] }, s);
+              })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden sm:grid lg:hidden grid-cols-3 gap-6", children: steps.map((s, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "div",
+              {
+                className: "group flex flex-col items-start gap-4 relative",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative z-10 w-16 h-16 rounded-full bg-card border border-border group-hover:border-cyan-electric group-hover:bg-cyan-electric group-hover:shadow-[0_0_30px_oklch(0.78_0.15_220/0.5)] transition-all duration-300 flex items-center justify-center font-mono text-sm text-foreground group-hover:text-deep shrink-0", children: String(i + 1).padStart(2, "0") }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-w-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-display text-lg lg:text-xl text-foreground leading-tight", children: s }) })
+                ]
+              },
+              s
+            )) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("ol", { className: "hidden lg:block relative max-w-5xl mx-auto", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute left-1/2 -translate-x-1/2 top-2 bottom-2 border-l border-dashed border-border/70" }),
+              steps.map((s, i) => {
+                const flip = i % 2 === 1;
+                const n = String(i + 1).padStart(2, "0");
+                return /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "relative py-4", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "pointer-events-none absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-cyan-electric shadow-[0_0_0_5px_oklch(0.78_0.15_220/0.10)]" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-x-8 items-center", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `${flip ? "col-start-2 flex justify-start" : "col-start-1 flex justify-end"}`, children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative w-[360px]", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative overflow-hidden rounded-2xl bg-deep border border-cream/10 shadow-[0_1px_2px_oklch(0.16_0.04_250/0.10),0_18px_36px_oklch(0.16_0.04_250/0.18)] h-16 flex items-center", children: [
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-dark opacity-35 pointer-events-none" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 gradient-aurora opacity-80 pointer-events-none" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-r from-deep/60 via-deep/80 to-ink/60 pointer-events-none" }),
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-w-0 flex-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                          "div",
+                          {
+                            className: `relative font-display text-lg text-cream font-semibold leading-tight truncate ${flip ? "pl-16 pr-6" : "pr-16 pl-6"} ${flip ? "text-left" : "text-right"}`,
+                            children: s
+                          }
+                        ) })
+                      ] }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "div",
+                        {
+                          className: `pointer-events-none absolute top-1/2 -translate-y-1/2 z-20 ${flip ? "-left-2" : "-right-2"}`,
+                          children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative w-14 h-14 rounded-full bg-deep/85 backdrop-blur border-[3px] border-cyan-electric/55 shadow-[0_0_0_1px_oklch(0.78_0.15_220/0.22),0_18px_38px_oklch(0.16_0.04_250/0.18)] grid place-items-center", children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -inset-2 rounded-full bg-cyan-electric/15 blur-md" }),
+                            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative font-display text-[15px] tracking-tight text-cyan-electric drop-shadow-[0_1px_0_oklch(0.98_0.005_240/0.7)]", children: n })
+                          ] })
+                        }
+                      )
+                    ] }) }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `${flip ? "col-start-1" : "col-start-2"}` })
+                  ] })
+                ] }, s);
+              })
+            ] })
+          ] })
+        ] })
+      ]
+    }
+  );
+}
+function Campo() {
+  const ref = useReveal();
+  const items = [
+    "Redução de custos operacionais",
+    "Menos retrabalho",
+    "Decisões baseadas em dados",
+    "Mais segurança jurídica",
+    "Padronização técnica",
+    "Comunicação clara com o cliente"
+  ];
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "section",
+    {
+      id: "beneficios",
+      ref,
+      className: "reveal pt-16 pb-28 lg:pt-20 lg:pb-36 bg-background relative overflow-hidden",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-light opacity-45 pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6 relative", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -inset-6 bg-cyan-electric/10 rounded-3xl blur-2xl" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative aspect-[4/5] rounded-2xl overflow-hidden border border-border shadow-2xl", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "img",
+                {
+                  src: fieldImg,
+                  alt: "Equipe técnica em campo realizando inspeção",
+                  className: "w-full h-full object-cover",
+                  loading: "lazy",
+                  width: 1280,
+                  height: 1024
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-deep/60 via-transparent to-transparent" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "div",
+              {
+                className: "absolute -bottom-8 -right-4 sm:-right-6 bg-cyan-electric text-deep p-6 rounded-xl max-w-[260px] shadow-2xl",
+                style: { animation: "float 6s ease-in-out infinite" },
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[10px] uppercase tracking-[0.25em] opacity-70", children: "Na prática" }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-display text-xl mt-1 leading-tight font-medium", children: "Operação previsível, sem surpresas" })
+                ]
+              }
+            )
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "06", label: "Benefícios e resultados" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground", children: [
+              "O que muda",
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "na prática" }),
+              "."
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg text-muted-foreground leading-relaxed", children: "Resultados visíveis no balanço, no tempo de resposta e na confiança do cliente final." }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-10 space-y-1", children: items.map((it, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "li",
+              {
+                className: "flex items-center gap-4 py-4 border-b border-border group hover:border-cyan-electric transition-colors cursor-default",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-mono text-xs text-muted-foreground w-8", children: String(i + 1).padStart(2, "0") }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-lg lg:text-xl flex-1 text-foreground", children: it }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cyan-electric opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all", children: "→" })
+                ]
+              },
+              it
+            )) })
+          ] })
+        ] })
+      ]
+    }
+  );
+}
+function Industrial() {
+  const ref = useReveal();
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "section",
+    {
+      id: "diagnostica",
+      ref,
+      className: "reveal py-28 lg:py-36 bg-secondary/40 relative overflow-hidden",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-light opacity-35 pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6 order-2 lg:order-1", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "07", label: "Engenharia diagnóstica" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground", children: [
+              "Diagnóstico técnico com",
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "critério e evidência" }),
+              "."
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg text-muted-foreground leading-relaxed", children: "Atuamos com princípios de engenharia diagnóstica para sustentar decisões técnicas com rastreabilidade, registros e análise baseada em evidências — reduzindo ruído, retrabalho e risco." }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-10 space-y-3 text-sm text-muted-foreground", children: [
+              "Inspeção e coleta de evidências com padrão técnico",
+              "Classificação e criticidade para priorização e SLA",
+              "Pareceres e laudos com critérios e histórico auditável",
+              "Tomada de decisão orientada por dados e rastreabilidade"
+            ].map((t) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-3", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-1.5 w-1.5 h-1.5 rounded-full bg-cyan-electric shrink-0" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: t })
+            ] }, t)) })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6 order-1 lg:order-2 relative", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -inset-6 bg-blue-soft/15 rounded-3xl blur-2xl" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative aspect-[5/4] rounded-2xl overflow-hidden border border-border shadow-2xl", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "img",
+                {
+                  src: industrialImg,
+                  alt: "Inspeção técnica em ambiente industrial",
+                  className: "w-full h-full object-cover",
+                  loading: "lazy",
+                  width: 1280,
+                  height: 1024
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-tr from-deep/40 via-transparent to-transparent" })
+            ] })
+          ] })
+        ] })
+      ]
+    }
+  );
+}
+function Diferencial() {
+  const ref = useReveal();
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "section",
+    {
+      id: "confidencialidade",
+      ref,
+      className: "reveal py-32 lg:py-44 bg-deep text-cream relative overflow-hidden",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 gradient-mesh opacity-60" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-dark opacity-25" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cream/15 to-transparent opacity-70" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cream/6 to-transparent" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-start", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "08", label: "Confidencialidade e experiência" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance", children: [
+              "Operação madura.",
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "Dados preservados" }),
+              "."
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg text-cream/75 leading-relaxed max-w-xl", children: "Atuamos com confidencialidade sobre ativos, clientes e ocorrências. Isso preserva informações sensíveis e mantém o foco no que importa: critério técnico, rastreabilidade e decisão segura." })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-6 grid sm:grid-cols-2 gap-3", children: [
+            {
+              t: "Confidencialidade por padrão",
+              d: "Não expomos clientes, dados e ocorrências. Protocolos e documentação sob controle."
+            },
+            {
+              t: "Experiência de campo",
+              d: "Inspeções, análise de evidências e condução técnica com método replicável."
+            },
+            {
+              t: "Rastreabilidade e auditoria",
+              d: "Histórico completo das decisões e ações — pronto para validação técnica e jurídica."
+            },
+            {
+              t: "Consistência operacional",
+              d: "Critérios claros, padronização e indicadores para previsibilidade do pós-obra."
+            }
+          ].map((it) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-7 rounded-xl glass hover:bg-cream/10 transition-colors", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-display text-xl lg:text-2xl text-cream leading-tight", children: it.t }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm text-cream/70 leading-relaxed", children: it.d }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6 h-px bg-cream/10" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 font-mono text-[10px] uppercase tracking-[0.25em] text-cyan-electric", children: "padrão CCA" })
+          ] }, it.t)) })
+        ] })
+      ]
+    }
+  );
+}
+function Cta() {
+  const ref = useReveal();
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "section",
+    {
+      id: "contato",
+      ref,
+      className: "reveal py-28 lg:py-36 bg-background relative overflow-hidden",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-light opacity-55 pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-electric/10 rounded-full blur-3xl" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative max-w-4xl mx-auto px-6 lg:px-10 text-center", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "11", label: "Vale a conversa" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground", children: [
+            "Se isso já acontece na sua operação,",
+            " ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "vale a conversa" }),
+            "."
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto", children: "Fale com um especialista da CCA Governança Técnica e veja como estruturar o pós-obra do seu empreendimento." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "form",
+            {
+              onSubmit: (e) => e.preventDefault(),
+              className: "mt-10 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "input",
+                  {
+                    type: "email",
+                    required: true,
+                    placeholder: "seu@email.com.br",
+                    className: "flex-1 px-5 py-4 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cyan-electric focus:ring-2 focus:ring-cyan-electric/20 transition-all"
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "button",
+                  {
+                    type: "submit",
+                    className: "px-7 py-4 rounded-md bg-cyan-electric text-deep font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all glow-accent",
+                    children: "Falar com especialista →"
+                  }
+                )
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-muted-foreground text-sm", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "a",
+              {
+                href: "https://wa.me/5585985097622",
+                target: "_blank",
+                rel: "noopener",
+                className: "flex items-center gap-2 hover:text-cyan-electric transition-colors",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-cyan-electric" }),
+                  "WhatsApp (85) 98509-7622"
+                ]
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "a",
+              {
+                href: "mailto:contato@cca-engenharia.com.br",
+                className: "flex items-center gap-2 hover:text-cyan-electric transition-colors",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-cyan-electric" }),
+                  "contato@cca-engenharia.com.br"
+                ]
+              }
+            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex items-center gap-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-1.5 h-1.5 rounded-full bg-cyan-electric" }),
+              "Francisco Costa"
+            ] })
+          ] })
+        ] })
+      ]
+    }
+  );
+}
+function Footer() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "border-t border-border py-14 bg-deep text-cream", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-3 gap-10 items-start", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoCCA, alt: "CCA", className: "h-8 w-auto" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-sm text-cream/65 max-w-xs", children: "Gestão técnica de pós-obra com controle, rastreabilidade e decisões seguras." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55 mb-3", children: "Navegação" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-2 text-sm", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#problema", className: "hover:text-cyan-electric transition-colors", children: "Problema" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#solucao", className: "hover:text-cyan-electric transition-colors", children: "Solução" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#fluxo", className: "hover:text-cyan-electric transition-colors", children: "Como funciona" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#contato", className: "hover:text-cyan-electric transition-colors", children: "Contato" }) })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55 mb-3", children: "Contato" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-2 text-sm text-cream/80", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Francisco Costa" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://wa.me/5585985097622", className: "hover:text-cyan-electric transition-colors", children: "WhatsApp (85) 98509-7622" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:contato@cca-engenharia.com.br", className: "hover:text-cyan-electric transition-colors", children: "contato@cca-engenharia.com.br" }) })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 mt-12 pt-6 border-t border-cream/10 flex flex-col sm:flex-row justify-between gap-2 text-xs text-cream/50", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+        "© ",
+        (/* @__PURE__ */ new Date()).getFullYear(),
+        " CCA Governança Técnica. Todos os direitos reservados."
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-mono uppercase tracking-[0.2em]", children: "Governança técnica aplicada · BR" })
+    ] })
+  ] });
+}
+function Index() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-dvh bg-background text-foreground", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Problema, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Plataforma, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Solucao, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Fluxo, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Campo, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Industrial, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Diferencial, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Cta, {})
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
+  ] });
+}
+export {
+  Index as component
+};

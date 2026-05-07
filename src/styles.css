@@ -206,6 +206,12 @@
       linear-gradient(to bottom, oklch(0.78 0.15 220 / 0.07) 1px, transparent 1px);
     background-size: 60px 60px;
   }
+  .grid-bg-light {
+    background-image:
+      linear-gradient(to right, oklch(0.62 0.12 235 / 0.14) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.62 0.12 235 / 0.14) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
   .grid-bg-dark {
     background-image:
       linear-gradient(to right, oklch(1 0 0 / 0.06) 1px, transparent 1px),

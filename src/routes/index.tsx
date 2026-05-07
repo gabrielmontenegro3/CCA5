@@ -3,16 +3,13 @@ import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import {
   Problema,
-  Solucao,
-  Fluxo,
   Plataforma,
-  Resultados,
   Campo,
   Industrial,
-  Experiencia,
   Diferencial,
+  Fluxo,
+  Solucao,
   Cta,
-  AreaCliente,
   Footer,
 } from "@/components/site/Sections";
 
@@ -59,16 +56,13 @@ function Index() {
       <main>
         <Hero />
         <Problema />
+        <Plataforma />
         <Solucao />
         <Fluxo />
-        <Plataforma />
-        <Resultados />
         <Campo />
         <Industrial />
-        <Experiencia />
         <Diferencial />
         <Cta />
-        <AreaCliente />
       </main>
       <Footer />
     </div>

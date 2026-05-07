@@ -1,16 +1,11 @@
 import { useReveal, useCountUp } from "@/hooks/use-reveal";
 import industrialImg from "@/assets/industrial.jpg";
 import fieldImg from "@/assets/field.jpg";
-import logoCCA from "@/assets/cca-logo.png";
+import logoCCA from "@/assets/logo cca collor (1).png";
 
 /* Helper — small section eyebrow */
 function Eyebrow({ n, label }: { n: string; label: string }) {
-  return (
-    <div className="inline-flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-cyan-electric mb-5">
-      <span className="w-6 h-px bg-cyan-electric" />
-      {n} · {label}
-    </div>
-  );
+  return null;
 }
 
 /* TELA 2 — DOR DO CLIENTE */
@@ -29,18 +24,19 @@ export function Problema() {
       ref={ref}
       className="reveal py-28 lg:py-36 relative bg-background overflow-hidden"
     >
-      <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 grid-bg-light opacity-60 pointer-events-none" />
+      {/* Section divider */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid lg:grid-cols-12 gap-10 items-end mb-16">
-          <div className="lg:col-span-6">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-5">
             <Eyebrow n="02" label="O problema" />
             <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-foreground text-balance">
               Sua pós-obra está{" "}
               <span className="text-gradient">fora de controle</span>?
             </h2>
-          </div>
-          <div className="lg:col-span-5 lg:col-start-8">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
               Após a entrega, chamados caem em SAC ou assistência técnica — áreas
               sem suporte técnico especializado e sem metodologia.{" "}
               <span className="text-foreground font-medium">
@@ -48,22 +44,34 @@ export function Problema() {
               </span>
             </p>
           </div>
-        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-px bg-border rounded-2xl overflow-hidden border border-border shadow-sm">
-          {items.map((it) => (
-            <div
-              key={it.n}
-              className="group bg-card p-7 lg:p-8 hover:bg-accent/5 transition-colors duration-500 relative"
-            >
-              <div className="font-mono text-xs text-muted-foreground mb-10">{it.n}</div>
-              <div className="font-display text-xl lg:text-2xl text-foreground mb-2 leading-tight">
-                {it.t}
-              </div>
-              <div className="text-sm text-muted-foreground leading-relaxed">{it.d}</div>
-              <div className="absolute bottom-0 left-0 right-0 h-px bg-cyan-electric scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+          <div className="lg:col-span-7 lg:col-start-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-3">
+              {items.map((it, idx) => (
+                <div
+                  key={it.n}
+                  className={`relative overflow-hidden p-7 rounded-xl bg-deep text-cream border border-cream/10 hover:bg-ink hover:border-cyan-electric/30 hover:-translate-y-1 transition-all group ${
+                    idx === items.length - 1 ? "sm:col-span-2" : ""
+                  }`}
+                >
+                  <div className="absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" />
+                  <div className="absolute inset-0 gradient-aurora opacity-70 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-deep/40 via-transparent to-transparent pointer-events-none" />
+
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="relative font-display text-xl lg:text-2xl text-cream leading-tight">
+                      {it.t}
+                    </div>
+                    <span className="relative font-mono text-[10px] text-cream/60">{it.n}</span>
+                  </div>
+                  <p className="relative text-sm text-cream/70 leading-relaxed">{it.d}</p>
+                  <div className="relative mt-5 h-0.5 bg-cream/15 rounded-full overflow-hidden">
+                    <div className="h-full bg-cyan-electric w-0 group-hover:w-full transition-all duration-700" />
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
@@ -75,25 +83,27 @@ export function Solucao() {
   const ref = useReveal<HTMLDivElement>();
   return (
     <section
-      id="virada"
+      id="pilares"
       ref={ref}
-      className="reveal py-28 lg:py-40 bg-deep text-cream relative overflow-hidden"
+      className="reveal py-28 lg:py-40 bg-background relative overflow-hidden"
     >
-      <div className="absolute inset-0 grid-bg-dark opacity-30" />
-      <div className="absolute inset-0 gradient-aurora" />
+      <div className="absolute inset-0 grid-bg-light opacity-55 pointer-events-none" />
       <div className="absolute -top-24 -right-24 w-[500px] h-[500px] bg-cyan-electric/15 rounded-full blur-3xl" />
       <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-blue-soft/15 rounded-full blur-3xl" />
+      {/* Section divider */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7">
-          <Eyebrow n="03" label="O diagnóstico" />
-          <h2 className="font-display text-5xl lg:text-7xl xl:text-8xl font-medium leading-[0.98] tracking-tight text-balance">
-            A garantia predial não é o problema.{" "}
-            <span className="text-gradient">A falta de gestão técnica é.</span>
+          <Eyebrow n="05" label="Pilares da metodologia" />
+          <h2 className="font-display text-5xl lg:text-7xl xl:text-8xl font-medium leading-[0.98] tracking-tight text-balance text-foreground">
+            Método aplicado para operar com{" "}
+            <span className="text-gradient">governança técnica</span>.
           </h2>
-          <p className="mt-8 text-lg lg:text-xl text-cream/75 max-w-xl leading-relaxed">
-            Com método e tecnologia, o pós-obra deixa de ser um centro de
-            problemas e se torna um processo construído sobre quatro pilares.
+          <p className="mt-8 text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
+            Quatro pilares orientam processos, registros e decisões — garantindo padronização,
+            rastreabilidade e indicadores que sustentam a gestão do pós-obra.
           </p>
         </div>
         <div className="lg:col-span-5 grid grid-cols-2 gap-3">
@@ -105,12 +115,16 @@ export function Solucao() {
           ].map((it) => (
             <div
               key={it.k}
-              className="p-6 rounded-xl glass hover:bg-cream/10 transition-colors group"
+              className="relative overflow-hidden p-6 lg:p-8 rounded-xl bg-deep text-cream border border-cream/10 hover:bg-ink hover:border-cyan-electric/30 transition-colors group min-h-[110px] lg:min-h-[140px]"
             >
-              <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-cyan-electric mb-2">
+              <div className="absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" />
+              <div className="absolute inset-0 gradient-aurora opacity-70 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-deep/40 via-transparent to-transparent pointer-events-none" />
+
+              <div className="relative font-mono text-[10px] lg:text-[11px] uppercase tracking-[0.25em] text-cyan-electric mb-2">
                 {it.k}
               </div>
-              <div className="font-display text-xl lg:text-2xl text-cream leading-tight">
+              <div className="relative font-display text-xl lg:text-3xl text-cream leading-[1.05] tracking-tight">
                 {it.v}
               </div>
             </div>
@@ -135,23 +149,27 @@ export function Plataforma() {
     <section
       id="solucao"
       ref={ref}
-      className="reveal py-28 lg:py-36 bg-secondary/50 relative overflow-hidden"
+      className="reveal py-28 lg:py-36 bg-deep text-cream relative overflow-hidden"
     >
+      <div className="absolute inset-0 grid-bg-dark opacity-25 pointer-events-none" />
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-cyan-electric/10 rounded-full blur-3xl" />
+      {/* Section divider */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cream/15 to-transparent opacity-70" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cream/6 to-transparent" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
         <div className="lg:col-span-5">
           <Eyebrow n="04" label="A solução" />
-          <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-foreground text-balance">
+          <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance">
             Gestão Técnica da{" "}
             <span className="text-gradient">Garantia Predial</span>.
           </h2>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+          <p className="mt-6 text-lg text-cream/75 leading-relaxed">
             Estruturamos todo o pós-obra com metodologia técnica e uma plataforma
             digital integrada que organiza cada etapa da operação.
           </p>
-          <div className="mt-8 inline-flex items-center gap-3 px-4 py-2 rounded-full bg-card border border-border text-sm">
+          <div className="mt-8 inline-flex items-center gap-3 px-4 py-2 rounded-full glass-dark border border-cream/10 text-sm">
             <span className="w-2 h-2 rounded-full bg-cyan-electric animate-pulse" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-foreground/70">
+            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-cream/75">
               Metodologia + plataforma CCA
             </span>
           </div>
@@ -161,18 +179,18 @@ export function Plataforma() {
           {items.map((it, i) => (
             <div
               key={it.t}
-              className={`p-7 rounded-xl bg-card border border-border hover:border-cyan-electric/50 hover:shadow-lg hover:-translate-y-1 transition-all group ${
-                i === 0 ? "sm:col-span-2 bg-gradient-to-br from-card to-secondary/40" : ""
+              className={`p-7 rounded-xl glass border border-cream/10 hover:bg-cream/10 hover:-translate-y-1 transition-all group ${
+                i === 0 ? "sm:col-span-2" : ""
               }`}
             >
               <div className="flex items-start justify-between mb-3">
-                <div className="font-display text-xl lg:text-2xl text-foreground">{it.t}</div>
-                <span className="font-mono text-[10px] text-muted-foreground">
+                <div className="font-display text-xl lg:text-2xl text-cream leading-tight">{it.t}</div>
+                <span className="font-mono text-[10px] text-cream/60">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">{it.d}</p>
-              <div className="mt-5 h-0.5 bg-border rounded-full overflow-hidden">
+              <p className="text-sm text-cream/70 leading-relaxed">{it.d}</p>
+              <div className="mt-5 h-0.5 bg-cream/15 rounded-full overflow-hidden">
                 <div className="h-full bg-cyan-electric w-0 group-hover:w-full transition-all duration-700" />
               </div>
             </div>
@@ -194,35 +212,92 @@ export function Fluxo() {
     <section
       id="fluxo"
       ref={ref}
-      className="reveal py-28 lg:py-36 bg-background relative overflow-hidden"
+      className="reveal py-28 lg:py-36 bg-deep text-cream relative overflow-hidden"
     >
-      <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 grid-bg-dark opacity-30 pointer-events-none" />
+      <div className="absolute inset-0 gradient-aurora opacity-70 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex">
-            <Eyebrow n="05" label="O fluxo" />
+            <Eyebrow n="04" label="Fluxo operacional" />
           </div>
-          <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
+          <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance">
             Um processo claro, do{" "}
             <span className="text-gradient">início ao fim</span>.
           </h2>
-          <p className="mt-6 text-muted-foreground text-lg">
-            Cada etapa é controlada, documentada e integrada.
+          <p className="mt-6 text-cream/75 text-lg">
+            Cada etapa é controlada, documentada e integrada — sem improviso.
           </p>
         </div>
 
         <div className="relative">
           <div className="absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/40 to-transparent hidden lg:block" />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-6 lg:gap-2">
+          {/* Mobile — timeline cards (like the reference) */}
+          <ol className="sm:hidden relative">
+            {/* dashed spine */}
+            <div className="pointer-events-none absolute left-3 top-2 bottom-2 border-l border-dashed border-border/70" />
+
+            {steps.map((s, i) => {
+              const flip = i % 2 === 1;
+              const n = String(i + 1).padStart(2, "0");
+              return (
+                <li key={s} className="relative py-2">
+                  {/* node dot on the spine */}
+                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-cyan-electric shadow-[0_0_0_4px_oklch(0.78_0.15_220/0.10)]" />
+
+                  {/* card */}
+                  <div className="relative px-9">
+                    <div
+                      className={`relative overflow-hidden rounded-2xl bg-deep border border-cream/10 shadow-[0_1px_2px_oklch(0.16_0.04_250/0.10),0_18px_36px_oklch(0.16_0.04_250/0.18)] h-16 flex items-center ${
+                        flip ? "flex-row-reverse text-right" : "flex-row text-left"
+                      }`}
+                    >
+                      {/* card background style: grid + aurora + fade */}
+                      <div className="absolute inset-0 grid-bg-dark opacity-35 pointer-events-none" />
+                      <div className="absolute inset-0 gradient-aurora opacity-80 pointer-events-none" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-deep/60 via-deep/80 to-ink/60 pointer-events-none" />
+
+                      <div className="min-w-0 flex-1">
+                        <div
+                          className={`relative font-display text-[1.02rem] text-cream font-semibold leading-tight truncate ${
+                            flip ? "pr-12 pl-5" : "pl-12 pr-5"
+                          }`}
+                        >
+                          {s}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* number bubble (alternates side) — overlaps card */}
+                    <div
+                      className={`pointer-events-none absolute top-1/2 -translate-y-1/2 z-20 ${
+                        flip ? "-right-2" : "-left-2"
+                      }`}
+                    >
+                      <div className="relative w-14 h-14 rounded-full bg-deep/90 backdrop-blur border-[3px] border-cyan-electric/55 shadow-[0_0_0_1px_oklch(0.78_0.15_220/0.22),0_18px_38px_oklch(0.16_0.04_250/0.18)] grid place-items-center">
+                        <div className="absolute -inset-2 rounded-full bg-cyan-electric/15 blur-md" />
+                        <span className="relative font-display text-[15px] tracking-tight text-cyan-electric drop-shadow-[0_1px_0_oklch(0.98_0.005_240/0.7)]">
+                          {n}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+
+          {/* Tablet — grid */}
+          <div className="hidden sm:grid lg:hidden grid-cols-3 gap-6">
             {steps.map((s, i) => (
               <div
                 key={s}
-                className="group flex lg:flex-col items-center lg:items-start gap-3 lg:gap-4 relative"
+                className="group flex flex-col items-start gap-4 relative"
               >
                 <div className="relative z-10 w-16 h-16 rounded-full bg-card border border-border group-hover:border-cyan-electric group-hover:bg-cyan-electric group-hover:shadow-[0_0_30px_oklch(0.78_0.15_220/0.5)] transition-all duration-300 flex items-center justify-center font-mono text-sm text-foreground group-hover:text-deep shrink-0">
                   {String(i + 1).padStart(2, "0")}
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div className="font-display text-lg lg:text-xl text-foreground leading-tight">
                     {s}
                   </div>
@@ -230,6 +305,62 @@ export function Fluxo() {
               </div>
             ))}
           </div>
+
+          {/* Desktop — timeline (like mobile, but centered) */}
+          <ol className="hidden lg:block relative max-w-5xl mx-auto">
+            {/* dashed spine */}
+            <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-2 bottom-2 border-l border-dashed border-border/70" />
+
+            {steps.map((s, i) => {
+              const flip = i % 2 === 1;
+              const n = String(i + 1).padStart(2, "0");
+              return (
+                <li key={s} className="relative py-4">
+                  {/* node dot on the spine */}
+                  <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-cyan-electric shadow-[0_0_0_5px_oklch(0.78_0.15_220/0.10)]" />
+
+                  <div className="grid grid-cols-2 gap-x-8 items-center">
+                    <div className={`${flip ? "col-start-2 flex justify-start" : "col-start-1 flex justify-end"}`}>
+                      <div className="relative w-[360px]">
+                      {/* card */}
+                      <div className="relative overflow-hidden rounded-2xl bg-deep border border-cream/10 shadow-[0_1px_2px_oklch(0.16_0.04_250/0.10),0_18px_36px_oklch(0.16_0.04_250/0.18)] h-16 flex items-center">
+                        {/* card background style: grid + aurora + fade */}
+                        <div className="absolute inset-0 grid-bg-dark opacity-35 pointer-events-none" />
+                        <div className="absolute inset-0 gradient-aurora opacity-80 pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-deep/60 via-deep/80 to-ink/60 pointer-events-none" />
+
+                        <div className="min-w-0 flex-1">
+                          <div
+                            className={`relative font-display text-lg text-cream font-semibold leading-tight truncate ${
+                              flip ? "pl-16 pr-6" : "pr-16 pl-6"
+                            } ${flip ? "text-left" : "text-right"}`}
+                          >
+                            {s}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* number bubble — overlaps card, near spine */}
+                      <div
+                        className={`pointer-events-none absolute top-1/2 -translate-y-1/2 z-20 ${
+                          flip ? "-left-2" : "-right-2"
+                        }`}
+                      >
+                        <div className="relative w-14 h-14 rounded-full bg-deep/85 backdrop-blur border-[3px] border-cyan-electric/55 shadow-[0_0_0_1px_oklch(0.78_0.15_220/0.22),0_18px_38px_oklch(0.16_0.04_250/0.18)] grid place-items-center">
+                          <div className="absolute -inset-2 rounded-full bg-cyan-electric/15 blur-md" />
+                          <span className="relative font-display text-[15px] tracking-tight text-cyan-electric drop-shadow-[0_1px_0_oklch(0.98_0.005_240/0.7)]">
+                            {n}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div className={`${flip ? "col-start-1" : "col-start-2"}`} />
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
         </div>
       </div>
     </section>
@@ -253,10 +384,13 @@ export function Resultados() {
     <section
       id="plataforma"
       ref={ref}
-      className="reveal py-28 lg:py-36 bg-deep text-cream relative overflow-hidden"
+      className="reveal pt-28 pb-16 lg:pt-36 lg:pb-20 bg-deep text-cream relative overflow-hidden"
     >
       <div className="absolute inset-0 grid-bg-dark opacity-30" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-electric/8 rounded-full blur-3xl" />
+      {/* Section divider */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cream/15 to-transparent opacity-70" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cream/6 to-transparent" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         <div className="mb-16 max-w-3xl">
           <Eyebrow n="06" label="Funcionalidades" />
@@ -306,8 +440,12 @@ export function Campo() {
     <section
       id="beneficios"
       ref={ref}
-      className="reveal py-28 lg:py-36 bg-background relative overflow-hidden"
+      className="reveal pt-16 pb-28 lg:pt-20 lg:pb-36 bg-background relative overflow-hidden"
     >
+      <div className="absolute inset-0 grid-bg-light opacity-45 pointer-events-none" />
+      {/* Section divider */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-6 relative">
           <div className="absolute -inset-6 bg-cyan-electric/10 rounded-3xl blur-2xl" />
@@ -336,7 +474,7 @@ export function Campo() {
         </div>
 
         <div className="lg:col-span-6">
-          <Eyebrow n="07" label="Benefícios" />
+          <Eyebrow n="06" label="Benefícios e resultados" />
           <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
             O que muda{" "}
             <span className="text-gradient">na prática</span>.
@@ -373,50 +511,41 @@ export function Campo() {
 /* TELA 8 — AUTORIDADE */
 export function Industrial() {
   const ref = useReveal<HTMLDivElement>();
-  const pilares = [
-    { t: "Rigor técnico", d: "Análises sustentadas por critérios objetivos." },
-    { t: "Padronização", d: "Metodologia única em toda a operação." },
-    { t: "Rastreabilidade", d: "Cada decisão documentada e auditável." },
-    { t: "Inteligência aplicada", d: "Dados que orientam a operação." },
-  ];
   return (
     <section
-      id="autoridade"
+      id="diagnostica"
       ref={ref}
       className="reveal py-28 lg:py-36 bg-secondary/40 relative overflow-hidden"
     >
+      <div className="absolute inset-0 grid-bg-light opacity-35 pointer-events-none" />
+      {/* Section divider */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-6 order-2 lg:order-1">
-          <Eyebrow n="08" label="Autoridade" />
+          <Eyebrow n="07" label="Engenharia diagnóstica" />
           <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
-            Governança técnica do{" "}
-            <span className="text-gradient">ativo construído</span>.
+            Diagnóstico técnico com{" "}
+            <span className="text-gradient">critério e evidência</span>.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            A CCA Governança Técnica atua com foco em quatro pilares.
-            Mais do que resolver problemas,{" "}
-            <span className="text-foreground font-medium">
-              estruturamos processos
-            </span>.
+            Atuamos com princípios de engenharia diagnóstica para sustentar decisões técnicas
+            com rastreabilidade, registros e análise baseada em evidências — reduzindo ruído,
+            retrabalho e risco.
           </p>
-          <div className="mt-10 grid sm:grid-cols-2 gap-4">
-            {pilares.map((p, i) => (
-              <div
-                key={p.t}
-                className="border-l-2 border-cyan-electric pl-4 py-2"
-              >
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                  Pilar {String(i + 1).padStart(2, "0")}
-                </div>
-                <div className="font-display text-lg lg:text-xl mt-1 text-foreground">
-                  {p.t}
-                </div>
-                <div className="text-sm text-muted-foreground mt-1">
-                  {p.d}
-                </div>
-              </div>
+          <ul className="mt-10 space-y-3 text-sm text-muted-foreground">
+            {[
+              "Inspeção e coleta de evidências com padrão técnico",
+              "Classificação e criticidade para priorização e SLA",
+              "Pareceres e laudos com critérios e histórico auditável",
+              "Tomada de decisão orientada por dados e rastreabilidade",
+            ].map((t) => (
+              <li key={t} className="flex gap-3">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-cyan-electric shrink-0" />
+                <span>{t}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
         <div className="lg:col-span-6 order-1 lg:order-2 relative">
           <div className="absolute -inset-6 bg-blue-soft/15 rounded-3xl blur-2xl" />
@@ -440,16 +569,13 @@ export function Industrial() {
 /* TELA 9 — RESULTADO FINAL */
 export function Experiencia() {
   const ref = useReveal<HTMLDivElement>();
-  const c1 = useCountUp(63);
-  const c2 = useCountUp(41);
-  const c3 = useCountUp(98);
   return (
     <section
       id="resultado"
       ref={ref}
       className="reveal py-28 lg:py-36 bg-background overflow-hidden relative"
     >
-      <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 grid-bg-light opacity-55 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10">
         <div className="max-w-3xl mb-16">
           <Eyebrow n="09" label="Resultado" />
@@ -461,24 +587,6 @@ export function Experiencia() {
             A garantia predial deixa de ser um risco e passa a ser um processo
             controlado, inteligente e confiável.
           </p>
-        </div>
-
-        <div className="grid sm:grid-cols-3 gap-px bg-border border border-border rounded-2xl overflow-hidden">
-          {[
-            { v: c1, suf: "%", k: "Redução de retrabalho" },
-            { v: c2, suf: "%", k: "Redução de custos" },
-            { v: c3, suf: "%", k: "Decisões com evidência" },
-          ].map((it, i) => (
-            <div key={i} className="bg-card p-10 lg:p-12 group relative">
-              <div className="font-display text-6xl lg:text-7xl text-foreground tabular-nums leading-none">
-                <span ref={it.v}>0</span>
-                <span className="text-cyan-electric">{it.suf}</span>
-              </div>
-              <div className="mt-4 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-                {it.k}
-              </div>
-            </div>
-          ))}
         </div>
 
         <div className="mt-12 flex flex-wrap items-center gap-4">
@@ -502,24 +610,57 @@ export function Diferencial() {
   const ref = useReveal<HTMLDivElement>();
   return (
     <section
+      id="confidencialidade"
       ref={ref}
       className="reveal py-32 lg:py-44 bg-deep text-cream relative overflow-hidden"
     >
       <div className="absolute inset-0 gradient-mesh opacity-60" />
       <div className="absolute inset-0 grid-bg-dark opacity-25" />
-      <div className="relative max-w-5xl mx-auto px-6 lg:px-10 text-center">
-        <div className="inline-flex">
-          <Eyebrow n="10" label="Posicionamento" />
+      {/* Section divider */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cream/15 to-transparent opacity-70" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cream/6 to-transparent" />
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-start">
+        <div className="lg:col-span-6">
+          <Eyebrow n="08" label="Confidencialidade e experiência" />
+          <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance">
+            Operação madura.{" "}
+            <span className="text-gradient">Dados preservados</span>.
+          </h2>
+          <p className="mt-6 text-lg text-cream/75 leading-relaxed max-w-xl">
+            Atuamos com confidencialidade sobre ativos, clientes e ocorrências.
+            Isso preserva informações sensíveis e mantém o foco no que importa:
+            critério técnico, rastreabilidade e decisão segura.
+          </p>
         </div>
-        <h2 className="font-display text-5xl lg:text-7xl xl:text-9xl font-medium leading-[0.95] tracking-tight text-balance">
-          Mais que gestão, <br />
-          <span className="text-gradient">engenharia aplicada</span>.
-        </h2>
-        <div className="mt-14 inline-flex items-center gap-4 px-6 py-3 rounded-full glass">
-          <span className="w-2 h-2 rounded-full bg-cyan-electric animate-pulse" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/80">
-            Engenharia · Tecnologia · Evidência
-          </span>
+
+        <div className="lg:col-span-6 grid sm:grid-cols-2 gap-3">
+          {[
+            {
+              t: "Confidencialidade por padrão",
+              d: "Não expomos clientes, dados e ocorrências. Protocolos e documentação sob controle.",
+            },
+            {
+              t: "Experiência de campo",
+              d: "Inspeções, análise de evidências e condução técnica com método replicável.",
+            },
+            {
+              t: "Rastreabilidade e auditoria",
+              d: "Histórico completo das decisões e ações — pronto para validação técnica e jurídica.",
+            },
+            {
+              t: "Consistência operacional",
+              d: "Critérios claros, padronização e indicadores para previsibilidade do pós-obra.",
+            },
+          ].map((it) => (
+            <div key={it.t} className="p-7 rounded-xl glass hover:bg-cream/10 transition-colors">
+              <div className="font-display text-xl lg:text-2xl text-cream leading-tight">{it.t}</div>
+              <p className="mt-3 text-sm text-cream/70 leading-relaxed">{it.d}</p>
+              <div className="mt-6 h-px bg-cream/10" />
+              <div className="mt-4 font-mono text-[10px] uppercase tracking-[0.25em] text-cyan-electric">
+                padrão CCA
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -535,8 +676,11 @@ export function Cta() {
       ref={ref}
       className="reveal py-28 lg:py-36 bg-background relative overflow-hidden"
     >
-      <div className="absolute inset-0 grid-bg opacity-40" />
+      <div className="absolute inset-0 grid-bg-light opacity-55 pointer-events-none" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-electric/10 rounded-full blur-3xl" />
+      {/* Section divider */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" />
 
       <div className="relative max-w-4xl mx-auto px-6 lg:px-10 text-center">
         <Eyebrow n="11" label="Vale a conversa" />
@@ -640,12 +784,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-3 gap-10 items-start">
         <div>
           <div className="flex items-center gap-3">
-            <div className="bg-cream rounded-md px-3 py-2">
-              <img src={logoCCA} alt="CCA Governança Técnica" className="h-7 w-auto" />
-            </div>
-          </div>
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55 mt-3">
-            Governança Técnica Predial
+            <img src={logoCCA} alt="CCA" className="h-8 w-auto" />
           </div>
           <p className="mt-4 text-sm text-cream/65 max-w-xs">
             Gestão técnica de pós-obra com controle, rastreabilidade e
