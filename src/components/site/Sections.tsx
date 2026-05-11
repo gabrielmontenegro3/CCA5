@@ -1,7 +1,8 @@
 import { useReveal, useCountUp } from "@/hooks/use-reveal";
 import industrialImg from "@/assets/industrial.jpg";
+import sistemaMockImg from "@/assets/VS PC VS MOBILE MOCK SITE 1.png";
 import fieldImg from "@/assets/field.jpg";
-import logoCCA from "@/assets/logo cca collor (1).png";
+import logoCCA from "@/assets/ChatGPT Image 11 de mai. de 2026, 15_25_03 (1).png";
 
 /* Helper — small section eyebrow */
 function Eyebrow({ n, label }: { n: string; label: string }) {
@@ -211,6 +212,55 @@ export function Plataforma() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* TELA 4.5 — NOSSO SISTEMA */
+export function Sistema() {
+  const ref = useReveal<HTMLDivElement>();
+
+  return (
+    <section
+      id="sistema"
+      ref={ref}
+      className="reveal py-28 lg:py-36 bg-background relative overflow-hidden"
+    >
+      <div className="absolute inset-0 grid-bg-light opacity-45 pointer-events-none" />
+      <div className="absolute -top-24 -left-24 w-[520px] h-[520px] bg-cyan-electric/10 rounded-full blur-3xl" />
+      <div className="absolute -bottom-24 -right-24 w-[520px] h-[520px] bg-blue-soft/10 rounded-full blur-3xl" />
+
+      {/* Section divider */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="lg:col-span-5">
+          <Eyebrow n="10" label="Nosso sistema" />
+          <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
+            Um sistema técnico{" "}
+            <span className="text-gradient">centralizado</span> para decisões seguras
+          </h2>
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
+            Centralizamos as etapas do pós-obra em um painel: registro, triagem,
+            diagnóstico, laudo e rastreabilidade. Assim, você ganha previsibilidade,
+            reduz retrabalho e mantém evidências auditáveis.
+          </p>
+        </div>
+
+        <div className="lg:col-span-7 relative">
+          <div className="relative">
+            <img
+              src={sistemaMockImg}
+              alt="Plataforma CCA — mockups desktop e mobile"
+              className="w-full h-auto object-contain"
+              loading="lazy"
+              width={2400}
+              height={1350}
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -638,13 +688,19 @@ export function Diferencial() {
         <div className="lg:col-span-6">
           <Eyebrow n="08" label="Confidencialidade e experiência" />
           <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance">
-            Operação madura.{" "}
-            <span className="text-gradient">Dados preservados</span>.
+            <span className="block">Atuação técnica com</span>
+            <span className="block">
+              <span className="text-gradient">confidencialidade</span>
+            </span>
           </h2>
           <p className="mt-6 text-lg text-cream/75 leading-relaxed max-w-xl">
-            Atuamos com confidencialidade sobre ativos, clientes e ocorrências.
-            Isso preserva informações sensíveis e mantém o foco no que importa:
-            critério técnico, rastreabilidade e decisão segura.
+            Atuamos em operações de pós-obra e garantia predial com total
+            confidencialidade, respeitando a integridade das informações e dos
+            empreendimentos atendidos.
+          </p>
+          <p className="mt-4 text-lg text-cream/75 leading-relaxed max-w-xl">
+            Por esse motivo, não divulgamos dados sensíveis ou identificação dos
+            clientes, mantendo o foco na estruturação técnica da operação.
           </p>
         </div>
 
@@ -803,7 +859,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-3 gap-10 items-start">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logoCCA} alt="CCA" className="h-8 w-auto" />
+            <img src={logoCCA} alt="CCA" className="h-12 w-auto" />
           </div>
           <p className="mt-4 text-sm text-cream/65 max-w-xs">
             Gestão técnica de pós-obra com controle, rastreabilidade e

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logoCCA from "@/assets/logo cca collor (1).png";
+import logoCCA from "@/assets/ChatGPT Image 11 de mai. de 2026, 15_25_03 (1).png";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +23,7 @@ export function Navbar() {
         <div />
 
         <a href="#top" className="justify-self-center" aria-label="Voltar ao topo">
-          <img src={logoCCA} alt="CCA" className="h-8 w-auto" />
+          <img src={logoCCA} alt="CCA" className="h-12 w-auto" />
         </a>
 
         <a

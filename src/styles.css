@@ -93,7 +93,7 @@
   --shadow-elev: 0 40px 80px -20px oklch(0.16 0.04 250 / 0.35);
   --shadow-glow: 0 0 60px oklch(0.78 0.15 220 / 0.35);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.16 0.04 250 / 0.92) 0%, oklch(0.22 0.05 250 / 0.78) 50%, oklch(0.78 0.15 220 / 0.18) 100%);
+  --gradient-hero: linear-gradient(135deg, oklch(0.16 0.04 250 / 0.66) 0%, oklch(0.22 0.05 250 / 0.52) 50%, oklch(0.78 0.15 220 / 0.12) 100%);
   --gradient-glow: radial-gradient(circle at 25% 30%, oklch(0.78 0.15 220 / 0.28), transparent 55%);
   --gradient-aurora: radial-gradient(ellipse at 70% 0%, oklch(0.78 0.15 220 / 0.22), transparent 60%), radial-gradient(ellipse at 0% 100%, oklch(0.62 0.12 235 / 0.18), transparent 55%);
   --gradient-mesh: conic-gradient(from 220deg at 50% 50%, oklch(0.78 0.15 220 / 0.18), oklch(0.22 0.05 250 / 0) 35%, oklch(0.62 0.12 235 / 0.15) 70%, oklch(0.78 0.15 220 / 0.18));

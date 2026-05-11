@@ -1,5 +1,5 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
-const logoCCA = "/assets/logo%20cca%20collor%20(1)-DD9JaQTH.png";
+const logoCCA = "/assets/ChatGPT%20Image%2011%20de%20mai.%20de%202026_%2015_25_03%20(1)-DUpfXKrB.png";
 function Navbar() {
   const [scrolled, setScrolled] = reactExports.useState(false);
   reactExports.useEffect(() => {
@@ -14,7 +14,7 @@ function Navbar() {
       className: `fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "bg-deep/80 backdrop-blur-xl border-b border-cream/10" : "bg-transparent"}`,
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 h-16 grid grid-cols-[1fr_auto_1fr] items-center", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", {}),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#top", className: "justify-self-center", "aria-label": "Voltar ao topo", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoCCA, alt: "CCA", className: "h-8 w-auto" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#top", className: "justify-self-center", "aria-label": "Voltar ao topo", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoCCA, alt: "CCA", className: "h-12 w-auto" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "a",
           {
@@ -50,13 +50,13 @@ function Hero() {
             fetchPriority: "high"
           }
         ) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] bg-deep/70" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] bg-deep/52" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] gradient-hero pointer-events-none" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] gradient-aurora pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] gradient-aurora opacity-75 pointer-events-none" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "div",
           {
-            className: "absolute inset-0 z-[1] grid-bg-dark opacity-40 pointer-events-none",
+            className: "absolute inset-0 z-[1] grid-bg-dark opacity-28 pointer-events-none",
             style: { animation: "grid-pan 24s linear infinite" }
           }
         ),
@@ -68,7 +68,7 @@ function Hero() {
               "Gestão técnica que transforma a",
               " ",
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "garantia predial" }),
-              " em controle e previsibilidade."
+              " num processo estruturado de ponta a ponta."
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-7 text-lg lg:text-xl text-cream/80 max-w-xl leading-relaxed", children: "Estruturamos a pós-obra com critérios técnicos, padronização e rastreabilidade — do chamado ao fechamento, com evidências e histórico auditável." }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-9 flex flex-col sm:flex-row gap-3", children: [
@@ -147,6 +147,7 @@ function useReveal() {
   return ref;
 }
 const industrialImg = "/assets/industrial-CcFzInZu.jpg";
+const sistemaMockImg = "/assets/VS%20PC%20VS%20MOBILE%20MOCK%20SITE%201-rLM9zZm1.png";
 const fieldImg = "/assets/field-CVNL-Tsb.jpg";
 function Eyebrow({ n, label }) {
   return null;
@@ -323,6 +324,53 @@ function Plataforma() {
     }
   );
 }
+function Sistema() {
+  const ref = useReveal();
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    "section",
+    {
+      id: "sistema",
+      ref,
+      className: "reveal py-28 lg:py-36 bg-background relative overflow-hidden",
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 grid-bg-light opacity-45 pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -top-24 -left-24 w-[520px] h-[520px] bg-cyan-electric/10 rounded-full blur-3xl" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -bottom-24 -right-24 w-[520px] h-[520px] bg-blue-soft/10 rounded-full blur-3xl" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-cyan-electric/25 to-transparent opacity-70" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-b from-cyan-electric/8 to-transparent" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-5", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "10", label: "Nosso sistema" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground", children: [
+              "Um sistema técnico",
+              " ",
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "centralizado" }),
+              " para decisões seguras"
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl", children: "Centralizamos as etapas do pós-obra em um painel: registro, triagem, diagnóstico, laudo e rastreabilidade. Assim, você ganha previsibilidade, reduz retrabalho e mantém evidências auditáveis." })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-7 relative", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -inset-6 bg-cyan-electric/10 rounded-3xl blur-2xl hidden lg:block" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative rounded-2xl overflow-hidden border border-border shadow-2xl bg-muted/40", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "img",
+                {
+                  src: sistemaMockImg,
+                  alt: "Plataforma CCA — mockups desktop e mobile",
+                  className: "w-full h-auto object-contain",
+                  loading: "lazy",
+                  width: 2400,
+                  height: 1350
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-0 bg-gradient-to-tr from-deep/25 via-transparent to-transparent" })
+            ] })
+          ] })
+        ] })
+      ]
+    }
+  );
+}
 function Fluxo() {
   const ref = useReveal();
   const steps = [
@@ -493,9 +541,9 @@ function Campo() {
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "06", label: "Benefícios e resultados" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground", children: [
-              "Benefícios de uma",
+              "Mais controle e previsibilidade na sua",
               " ",
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "pós-obra estruturada" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "pós-obra" }),
               "."
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg text-muted-foreground leading-relaxed", children: "Resultados visíveis no balanço, no tempo de resposta e na confiança do cliente final." }),
@@ -520,12 +568,11 @@ function Campo() {
 function Industrial() {
   const ref = useReveal();
   const map = [
-    { k: "Hero Inicial", v: "Mais controle e previsibilidade na sua pós-obra" },
     { k: "Problema", v: "Desafios comuns na gestão da pós-obra" },
     { k: "Solução", v: "Gestão técnica estruturada para a pós-obra" },
     { k: "Como Funciona", v: "Gestão técnica estruturada em todas as etapas da pós-obra" },
     { k: "Pilares", v: "Os pilares da gestão técnica da pós-obra" },
-    { k: "Resultados", v: "Resultados práticos na gestão da pós-obra" }
+    { k: "Resultados", v: "Mais controle e previsibilidade na sua pós-obra" }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "section",
@@ -541,10 +588,9 @@ function Industrial() {
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6 order-2 lg:order-1", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "07", label: "Engenharia diagnóstica" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground", children: [
-              "Resultados práticos na",
+              "Mais controle e previsibilidade na sua",
               " ",
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "gestão da pós-obra" }),
-              "."
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "pós-obra" })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg text-muted-foreground leading-relaxed", children: "Um resumo da apresentação em etapas — do contexto ao impacto na operação." }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10 space-y-3", children: map.map((it) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -599,12 +645,11 @@ function Diferencial() {
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-6", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "08", label: "Confidencialidade e experiência" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance", children: [
-              "Operação madura.",
-              " ",
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "Dados preservados" }),
-              "."
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "block", children: "Atuação técnica com" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "block", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "confidencialidade" }) })
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg text-cream/75 leading-relaxed max-w-xl", children: "Atuamos com confidencialidade sobre ativos, clientes e ocorrências. Isso preserva informações sensíveis e mantém o foco no que importa: critério técnico, rastreabilidade e decisão segura." })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg text-cream/75 leading-relaxed max-w-xl", children: "Atuamos em operações de pós-obra e garantia predial com total confidencialidade, respeitando a integridade das informações e dos empreendimentos atendidos." }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-lg text-cream/75 leading-relaxed max-w-xl", children: "Por esse motivo, não divulgamos dados sensíveis ou identificação dos clientes, mantendo o foco na estruturação técnica da operação." })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-6 grid sm:grid-cols-2 gap-3", children: [
             {
@@ -719,7 +764,7 @@ function Footer() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "border-t border-border py-14 bg-deep text-cream", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-3 gap-10 items-start", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoCCA, alt: "CCA", className: "h-8 w-auto" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoCCA, alt: "CCA", className: "h-12 w-auto" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-sm text-cream/65 max-w-xs", children: "Gestão técnica de pós-obra com controle, rastreabilidade e decisões seguras." })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
@@ -766,6 +811,7 @@ function Index() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(Campo, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Industrial, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Diferencial, {}),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Sistema, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Cta, {})
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})

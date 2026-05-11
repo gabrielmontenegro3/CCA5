@@ -4,6 +4,7 @@ import { Hero } from "@/components/site/Hero";
 import {
   Problema,
   Plataforma,
+  Sistema,
   Campo,
   Industrial,
   Diferencial,
@@ -62,6 +63,7 @@ function Index() {
         <Campo />
         <Industrial />
         <Diferencial />
+        <Sistema />
         <Cta />
       </main>
       <Footer />

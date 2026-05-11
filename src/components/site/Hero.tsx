@@ -19,11 +19,11 @@ export function Hero() {
       </div>
 
       {/* Layered overlays — deep navy + cyan glow + technical grid */}
-      <div className="absolute inset-0 z-[1] bg-deep/70" />
+      <div className="absolute inset-0 z-[1] bg-deep/52" />
       <div className="absolute inset-0 z-[1] gradient-hero pointer-events-none" />
-      <div className="absolute inset-0 z-[1] gradient-aurora pointer-events-none" />
+      <div className="absolute inset-0 z-[1] gradient-aurora opacity-75 pointer-events-none" />
       <div
-        className="absolute inset-0 z-[1] grid-bg-dark opacity-40 pointer-events-none"
+        className="absolute inset-0 z-[1] grid-bg-dark opacity-28 pointer-events-none"
         style={{ animation: "grid-pan 24s linear infinite" }}
       />
       {/* Section divider */}
