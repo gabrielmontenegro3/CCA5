@@ -374,7 +374,7 @@ function Fluxo() {
     "Planejamento",
     "Inspeção",
     "Diagnóstico",
-    "Solução técnica",
+    "Solução / Prescrição técnica",
     "Laudo",
     "Fechamento"
   ];
@@ -689,12 +689,12 @@ function Cta() {
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative max-w-4xl mx-auto px-6 lg:px-10 text-center", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(Eyebrow, { n: "11", label: "Vale a conversa" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-3 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground", children: [
-            "Centralize chamados e tenha",
+            "Centralize seus chamados e tenha",
             " ",
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "controle completo" }),
             " da sua operação."
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed", children: "Acompanhe análises técnicas em um ambiente integrado para ganhar previsibilidade e reduzir retrabalho." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed", children: "Acompanhe as análises técnicas em um ambiente integrado para ganhar previsibilidade e reduzir retrabalho." }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10 flex flex-col sm:flex-row items-center justify-center gap-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "a",
             {
@@ -708,7 +708,7 @@ function Cta() {
               ]
             }
           ) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4", children: ["Operação estruturada", "Redução de retrabalho", "Decisões técnicas mais seguras"].map((t) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4", children: ["Operação estruturada", "Redução de retrabalho", "Decisões técnicas mais assertivas"].map((t) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "li",
             {
               className: "inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-card border border-border text-foreground",

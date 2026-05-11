@@ -272,7 +272,7 @@ export function Fluxo() {
   const ref = useReveal<HTMLDivElement>();
   const steps = [
     "Demanda", "Registro", "Triagem", "Planejamento", "Inspeção",
-    "Diagnóstico", "Solução técnica", "Laudo", "Fechamento",
+    "Diagnóstico", "Solução / Prescrição técnica", "Laudo", "Fechamento",
   ];
   return (
     <section
@@ -756,11 +756,11 @@ export function Cta() {
       <div className="relative max-w-4xl mx-auto px-6 lg:px-10 text-center">
         <Eyebrow n="11" label="Vale a conversa" />
         <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
-          Centralize chamados e tenha{" "}
+          Centralize seus chamados e tenha{" "}
           <span className="text-gradient">controle completo</span> da sua operação.
         </h2>
         <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-          Acompanhe análises técnicas em um ambiente integrado para ganhar previsibilidade e reduzir retrabalho.
+          Acompanhe as análises técnicas em um ambiente integrado para ganhar previsibilidade e reduzir retrabalho.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -775,7 +775,7 @@ export function Cta() {
         </div>
 
         <ul className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-          {["Operação estruturada", "Redução de retrabalho", "Decisões técnicas mais seguras"].map((t) => (
+          {["Operação estruturada", "Redução de retrabalho", "Decisões técnicas mais assertivas"].map((t) => (
             <li
               key={t}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-card border border-border text-foreground"
@@ -830,7 +830,7 @@ export function AreaCliente() {
             <span className="text-gradient">sua operação</span>.
           </h2>
           <p className="mt-4 text-muted-foreground max-w-xl">
-            Gerencie demandas técnicas, acompanhe análises e auditorias em um
+            Gerencie demandas técnicas, acompanhe as análises e auditorias em um
             único painel.
           </p>
         </div>
