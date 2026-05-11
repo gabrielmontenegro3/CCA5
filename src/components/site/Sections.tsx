@@ -522,7 +522,7 @@ export function Industrial() {
     { k: "Solução", v: "Gestão técnica estruturada para a pós-obra" },
     { k: "Como Funciona", v: "Gestão técnica estruturada em todas as etapas da pós-obra" },
     { k: "Pilares", v: "Os pilares da gestão técnica da pós-obra" },
-    { k: "Resultados", v: "Resultados práticos na gestão da pós-obra" },
+    { k: "Resultados", v: "Mais controle e previsibilidade na sua pós-obra" },
   ];
   return (
     <section
@@ -538,8 +538,8 @@ export function Industrial() {
         <div className="lg:col-span-6 order-2 lg:order-1">
           <Eyebrow n="07" label="Engenharia diagnóstica" />
           <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
-            Resultados práticos na{" "}
-            <span className="text-gradient">gestão da pós-obra</span>.
+            Mais controle e previsibilidade na sua{" "}
+            <span className="text-gradient">pós-obra</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             Um resumo da apresentação em etapas — do contexto ao impacto na operação.
