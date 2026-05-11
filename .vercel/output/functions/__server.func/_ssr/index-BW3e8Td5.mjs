@@ -349,23 +349,17 @@ function Sistema() {
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl", children: "Centralizamos as etapas do pós-obra em um painel: registro, triagem, diagnóstico, laudo e rastreabilidade. Assim, você ganha previsibilidade, reduz retrabalho e mantém evidências auditáveis." })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-7 relative", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -inset-6 bg-cyan-electric/10 rounded-3xl blur-2xl hidden lg:block" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative rounded-2xl overflow-hidden border border-border shadow-2xl bg-muted/40", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "img",
-                {
-                  src: sistemaMockImg,
-                  alt: "Plataforma CCA — mockups desktop e mobile",
-                  className: "w-full h-auto object-contain",
-                  loading: "lazy",
-                  width: 2400,
-                  height: 1350
-                }
-              ),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-0 bg-gradient-to-tr from-deep/25 via-transparent to-transparent" })
-            ] })
-          ] })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "lg:col-span-7 relative", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "img",
+            {
+              src: sistemaMockImg,
+              alt: "Plataforma CCA — mockups desktop e mobile",
+              className: "w-full h-auto object-contain",
+              loading: "lazy",
+              width: 2400,
+              height: 1350
+            }
+          ) }) })
         ] })
       ]
     }
