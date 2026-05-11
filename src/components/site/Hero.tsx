@@ -35,7 +35,7 @@ export function Hero() {
         <div className="lg:col-span-6">
           <h1 className="font-display text-[2.4rem] sm:text-5xl lg:text-6xl xl:text-[4.75rem] font-medium leading-[0.98] tracking-tight text-balance">
             Gestão técnica que transforma a{" "}
-            <span className="text-gradient">garantia predial</span> em controle e previsibilidade.
+            <span className="text-gradient">garantia predial</span> num processo estruturado de ponta a ponta.
           </h1>
 
           <p className="mt-7 text-lg lg:text-xl text-cream/80 max-w-xl leading-relaxed">

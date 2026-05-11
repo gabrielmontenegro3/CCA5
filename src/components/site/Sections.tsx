@@ -482,8 +482,8 @@ export function Campo() {
         <div className="lg:col-span-6">
           <Eyebrow n="06" label="Benefícios e resultados" />
           <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
-            Benefícios de uma{" "}
-            <span className="text-gradient">pós-obra estruturada</span>.
+            Mais controle e previsibilidade na sua{" "}
+            <span className="text-gradient">pós-obra</span>.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             Resultados visíveis no balanço, no tempo de resposta e na confiança
@@ -518,7 +518,6 @@ export function Campo() {
 export function Industrial() {
   const ref = useReveal<HTMLDivElement>();
   const map = [
-    { k: "Hero Inicial", v: "Mais controle e previsibilidade na sua pós-obra" },
     { k: "Problema", v: "Desafios comuns na gestão da pós-obra" },
     { k: "Solução", v: "Gestão técnica estruturada para a pós-obra" },
     { k: "Como Funciona", v: "Gestão técnica estruturada em todas as etapas da pós-obra" },
