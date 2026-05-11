@@ -12,11 +12,31 @@ function Eyebrow({ n, label }: { n: string; label: string }) {
 export function Problema() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    { n: "01", t: "Respostas lentas", d: "Chamados parados em SAC sem suporte técnico especializado." },
-    { n: "02", t: "Retrabalho constante", d: "Equipes operam em ciclos repetidos de correção." },
-    { n: "03", t: "Falta de padrão", d: "Cada caso conduzido de forma improvisada e sem método." },
-    { n: "04", t: "Baixa assertividade", d: "Laudos divergentes comprometem a decisão técnica." },
-    { n: "05", t: "Custos aumentando", d: "Operação sem controle vira prejuízo invisível no balanço." },
+    {
+      n: "01",
+      t: "Atendimento pode ser mais ágil",
+      d: "Chamados técnicos podem ser analisados com mais rapidez quando há critérios e fluxo definidos.",
+    },
+    {
+      n: "02",
+      t: "Oportunidade de reduzir retrabalho",
+      d: "A padronização técnica evita ciclos repetitivos e melhora a eficiência da equipe.",
+    },
+    {
+      n: "03",
+      t: "Padronização em desenvolvimento",
+      d: "Processos claros permitem uniformidade na análise e na tomada de decisão.",
+    },
+    {
+      n: "04",
+      t: "Decisões técnicas mais consistentes",
+      d: "Laudos estruturados trazem mais segurança e alinhamento entre áreas.",
+    },
+    {
+      n: "05",
+      t: "Melhor controle de custos",
+      d: "Com gestão técnica adequada, é possível reduzir desperdícios e evitar custos invisíveis.",
+    },
   ];
   return (
     <section
@@ -33,15 +53,14 @@ export function Problema() {
           <div className="lg:col-span-5">
             <Eyebrow n="02" label="O problema" />
             <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-foreground text-balance">
-              Sua pós-obra está{" "}
-              <span className="text-gradient">fora de controle</span>?
+              Transforme sua pós-obra em um{" "}
+              <span className="text-gradient">processo estruturado</span>
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Após a entrega, chamados caem em SAC ou assistência técnica — áreas
-              sem suporte técnico especializado e sem metodologia.{" "}
-              <span className="text-foreground font-medium">
-                A garantia predial vira um processo reativo e desorganizado.
-              </span>
+              Após a entrega, é comum que os chamados sejam direcionados ao SAC
+              sem um fluxo técnico bem definido. Com uma abordagem estruturada,
+              é possível ganhar previsibilidade, reduzir retrabalho e tomar
+              decisões com mais segurança.
             </p>
           </div>
 
@@ -98,20 +117,20 @@ export function Solucao() {
         <div className="lg:col-span-7">
           <Eyebrow n="05" label="Pilares da metodologia" />
           <h2 className="font-display text-5xl lg:text-7xl xl:text-8xl font-medium leading-[0.98] tracking-tight text-balance text-foreground">
-            Método aplicado para operar com{" "}
-            <span className="text-gradient">governança técnica</span>.
+            Gestão técnica transforma a garantia predial em um{" "}
+            <span className="text-gradient">processo controlado</span>
           </h2>
           <p className="mt-8 text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
-            Quatro pilares orientam processos, registros e decisões — garantindo padronização,
-            rastreabilidade e indicadores que sustentam a gestão do pós-obra.
+            Com critérios técnicos, padronização e acompanhamento estruturado, a pós-obra deixa
+            de ser reativa e passa a operar com previsibilidade e controle.
           </p>
         </div>
         <div className="lg:col-span-5 grid grid-cols-2 gap-3">
           {[
-            { k: "Pilar 01", v: "Controlado" },
-            { k: "Pilar 02", v: "Padronizado" },
-            { k: "Pilar 03", v: "Rastreável" },
-            { k: "Pilar 04", v: "Orientado por dados" },
+            { k: "Pilar 01", v: "Controlado", d: "Controle dos chamados e das decisões técnicas" },
+            { k: "Pilar 02", v: "Padronizado", d: "Critérios técnicos definidos para cada situação" },
+            { k: "Pilar 03", v: "Rastreável", d: "Histórico completo das ações e atendimentos" },
+            { k: "Pilar 04", v: "Orientado por dados", d: "Decisões baseadas em indicadores reais" },
           ].map((it) => (
             <div
               key={it.k}
@@ -127,6 +146,9 @@ export function Solucao() {
               <div className="relative font-display text-xl lg:text-3xl text-cream leading-[1.05] tracking-tight">
                 {it.v}
               </div>
+              <p className="relative mt-3 text-sm lg:text-[15px] text-cream/75 leading-relaxed">
+                {it.d}
+              </p>
             </div>
           ))}
         </div>
@@ -167,12 +189,6 @@ export function Plataforma() {
             Estruturamos todo o pós-obra com metodologia técnica e uma plataforma
             digital integrada que organiza cada etapa da operação.
           </p>
-          <div className="mt-8 inline-flex items-center gap-3 px-4 py-2 rounded-full glass-dark border border-cream/10 text-sm">
-            <span className="w-2 h-2 rounded-full bg-cyan-electric animate-pulse" />
-            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-cream/75">
-              Metodologia + plataforma CCA
-            </span>
-          </div>
         </div>
 
         <div className="lg:col-span-7 grid sm:grid-cols-2 gap-3">
@@ -222,11 +238,12 @@ export function Fluxo() {
             <Eyebrow n="04" label="Fluxo operacional" />
           </div>
           <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance">
-            Um processo claro, do{" "}
-            <span className="text-gradient">início ao fim</span>.
+            Gestão técnica estruturada em{" "}
+            <span className="text-gradient">todas as etapas</span> da pós-obra
           </h2>
           <p className="mt-6 text-cream/75 text-lg">
-            Cada etapa é controlada, documentada e integrada — sem improviso.
+            Cada etapa é conduzida com critérios técnicos, garantindo rastreabilidade,
+            padronização e segurança na tomada de decisão.
           </p>
         </div>
 
@@ -460,24 +477,13 @@ export function Campo() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-deep/60 via-transparent to-transparent" />
           </div>
-          <div
-            className="absolute -bottom-8 -right-4 sm:-right-6 bg-cyan-electric text-deep p-6 rounded-xl max-w-[260px] shadow-2xl"
-            style={{ animation: "float 6s ease-in-out infinite" }}
-          >
-            <div className="font-mono text-[10px] uppercase tracking-[0.25em] opacity-70">
-              Na prática
-            </div>
-            <div className="font-display text-xl mt-1 leading-tight font-medium">
-              Operação previsível, sem surpresas
-            </div>
-          </div>
         </div>
 
         <div className="lg:col-span-6">
           <Eyebrow n="06" label="Benefícios e resultados" />
           <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
-            O que muda{" "}
-            <span className="text-gradient">na prática</span>.
+            Benefícios de uma{" "}
+            <span className="text-gradient">pós-obra estruturada</span>.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             Resultados visíveis no balanço, no tempo de resposta e na confiança
@@ -511,6 +517,14 @@ export function Campo() {
 /* TELA 8 — AUTORIDADE */
 export function Industrial() {
   const ref = useReveal<HTMLDivElement>();
+  const map = [
+    { k: "Hero Inicial", v: "Mais controle e previsibilidade na sua pós-obra" },
+    { k: "Problema", v: "Desafios comuns na gestão da pós-obra" },
+    { k: "Solução", v: "Gestão técnica estruturada para a pós-obra" },
+    { k: "Como Funciona", v: "Gestão técnica estruturada em todas as etapas da pós-obra" },
+    { k: "Pilares", v: "Os pilares da gestão técnica da pós-obra" },
+    { k: "Resultados", v: "Resultados práticos na gestão da pós-obra" },
+  ];
   return (
     <section
       id="diagnostica"
@@ -525,27 +539,29 @@ export function Industrial() {
         <div className="lg:col-span-6 order-2 lg:order-1">
           <Eyebrow n="07" label="Engenharia diagnóstica" />
           <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
-            Diagnóstico técnico com{" "}
-            <span className="text-gradient">critério e evidência</span>.
+            Resultados práticos na{" "}
+            <span className="text-gradient">gestão da pós-obra</span>.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            Atuamos com princípios de engenharia diagnóstica para sustentar decisões técnicas
-            com rastreabilidade, registros e análise baseada em evidências — reduzindo ruído,
-            retrabalho e risco.
+            Um resumo da apresentação em etapas — do contexto ao impacto na operação.
           </p>
-          <ul className="mt-10 space-y-3 text-sm text-muted-foreground">
-            {[
-              "Inspeção e coleta de evidências com padrão técnico",
-              "Classificação e criticidade para priorização e SLA",
-              "Pareceres e laudos com critérios e histórico auditável",
-              "Tomada de decisão orientada por dados e rastreabilidade",
-            ].map((t) => (
-              <li key={t} className="flex gap-3">
-                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-cyan-electric shrink-0" />
-                <span>{t}</span>
-              </li>
+
+          <div className="mt-10 space-y-3">
+            {map.map((it) => (
+              <div
+                key={it.k}
+                className="relative overflow-hidden rounded-xl border border-border bg-background/70 backdrop-blur p-5 hover:border-cyan-electric/35 transition-colors"
+              >
+                <div className="absolute inset-0 grid-bg-light opacity-30 pointer-events-none" />
+                <div className="relative font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                  {it.k}
+                </div>
+                <div className="relative mt-2 font-display text-lg lg:text-xl text-foreground leading-tight">
+                  {it.v}
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
         <div className="lg:col-span-6 order-1 lg:order-2 relative">
           <div className="absolute -inset-6 bg-blue-soft/15 rounded-3xl blur-2xl" />
@@ -684,32 +700,36 @@ export function Cta() {
 
       <div className="relative max-w-4xl mx-auto px-6 lg:px-10 text-center">
         <Eyebrow n="11" label="Vale a conversa" />
-        <h2 className="font-display text-4xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
-          Se isso já acontece na sua operação,{" "}
-          <span className="text-gradient">vale a conversa</span>.
+        <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.02] tracking-tight text-balance text-foreground">
+          Centralize chamados e tenha{" "}
+          <span className="text-gradient">controle completo</span> da sua operação.
         </h2>
-        <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Fale com um especialista da CCA Governança Técnica e veja como
-          estruturar o pós-obra do seu empreendimento.
+        <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          Acompanhe análises técnicas em um ambiente integrado para ganhar previsibilidade e reduzir retrabalho.
         </p>
 
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className="mt-10 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto"
-        >
-          <input
-            type="email"
-            required
-            placeholder="seu@email.com.br"
-            className="flex-1 px-5 py-4 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-cyan-electric focus:ring-2 focus:ring-cyan-electric/20 transition-all"
-          />
-          <button
-            type="submit"
-            className="px-7 py-4 rounded-md bg-cyan-electric text-deep font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all glow-accent"
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a
+            href="https://wa.me/5585985097622"
+            target="_blank"
+            rel="noopener"
+            className="w-full sm:w-auto px-8 py-4 rounded-md bg-cyan-electric text-deep font-medium hover:opacity-90 hover:-translate-y-0.5 transition-all glow-accent inline-flex items-center justify-center gap-2"
           >
-            Falar com especialista →
-          </button>
-        </form>
+            Falar com especialista <span aria-hidden>→</span>
+          </a>
+        </div>
+
+        <ul className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          {["Operação estruturada", "Redução de retrabalho", "Decisões técnicas mais seguras"].map((t) => (
+            <li
+              key={t}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-card border border-border text-foreground"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-electric" />
+              <span className="font-display text-sm lg:text-[15px]">{t}</span>
+            </li>
+          ))}
+        </ul>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-muted-foreground text-sm">
           <a
@@ -796,9 +816,13 @@ export function Footer() {
             Navegação
           </div>
           <ul className="space-y-2 text-sm">
+            <li><a href="#top" className="hover:text-cyan-electric transition-colors">Hero Inicial</a></li>
             <li><a href="#problema" className="hover:text-cyan-electric transition-colors">Problema</a></li>
             <li><a href="#solucao" className="hover:text-cyan-electric transition-colors">Solução</a></li>
-            <li><a href="#fluxo" className="hover:text-cyan-electric transition-colors">Como funciona</a></li>
+            <li><a href="#fluxo" className="hover:text-cyan-electric transition-colors">Como Funciona</a></li>
+            <li><a href="#pilares" className="hover:text-cyan-electric transition-colors">Pilares</a></li>
+            <li><a href="#resultado" className="hover:text-cyan-electric transition-colors">Resultados</a></li>
+            <li><a href="#beneficios" className="hover:text-cyan-electric transition-colors">Benefícios</a></li>
             <li><a href="#contato" className="hover:text-cyan-electric transition-colors">Contato</a></li>
           </ul>
         </div>
