@@ -1,37 +1,20 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
-const logoCCA = "/assets/ChatGPT%20Image%2011%20de%20mai.%20de%202026_%2015_25_03%20(1)-DUpfXKrB.png";
-function Navbar() {
-  const [scrolled, setScrolled] = reactExports.useState(false);
-  reactExports.useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "header",
-    {
-      className: `fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "bg-deep/80 backdrop-blur-xl border-b border-cream/10" : "bg-transparent"}`,
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 h-16 grid grid-cols-[1fr_auto_1fr] items-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", {}),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#top", className: "justify-self-center", "aria-label": "Voltar ao topo", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoCCA, alt: "CCA", className: "h-12 w-auto" }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "a",
-          {
-            href: "#contato",
-            className: "justify-self-end inline-flex items-center gap-2 text-xs sm:text-sm font-medium px-3 sm:px-4 py-2 rounded-md bg-cyan-electric text-deep hover:opacity-90 hover:-translate-y-0.5 transition-all whitespace-nowrap",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "sm:hidden", children: "Conversa" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "hidden sm:inline", children: "Vale a conversa" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { "aria-hidden": true, children: "→" })
-            ]
-          }
-        )
-      ] })
-    }
-  );
-}
-const heroBg = "/assets/hero-bg-DkW7QQkX.jpg";
+import { N as Navbar, f as fieldImg, i as industrialImg, l as logoCCA } from "./industrial-DbXijkji.mjs";
+import "../_libs/tanstack__react-router.mjs";
+import "../_libs/tanstack__router-core.mjs";
+import "../_libs/tanstack__history.mjs";
+import "../_libs/cookie-es.mjs";
+import "../_libs/seroval.mjs";
+import "../_libs/seroval-plugins.mjs";
+import "node:stream/web";
+import "node:stream";
+import "../_libs/react-dom.mjs";
+import "util";
+import "crypto";
+import "async_hooks";
+import "stream";
+import "../_libs/isbot.mjs";
+const heroBg = "/assets/hero-building-Hy3RM4S0.jpg";
 function Hero() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "section",
@@ -43,20 +26,20 @@ function Hero() {
           "img",
           {
             src: heroBg,
-            alt: "Estrutura de torre em construção ao crepúsculo, vista cinemática",
+            alt: "Prédio moderno com fachada em vidro, enquadramento em perspectiva com o céu",
             className: "w-full h-full object-cover",
             width: 1920,
             height: 1080,
             fetchPriority: "high"
           }
         ) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] bg-deep/52" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] bg-deep/76" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] gradient-hero pointer-events-none" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] gradient-aurora opacity-75 pointer-events-none" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-[1] gradient-aurora opacity-92 pointer-events-none" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "div",
           {
-            className: "absolute inset-0 z-[1] grid-bg-dark opacity-28 pointer-events-none",
+            className: "absolute inset-0 z-[1] grid-bg-dark opacity-44 pointer-events-none",
             style: { animation: "grid-pan 24s linear infinite" }
           }
         ),
@@ -146,9 +129,7 @@ function useReveal() {
   }, []);
   return ref;
 }
-const industrialImg = "/assets/industrial-CcFzInZu.jpg";
 const sistemaMockImg = "/assets/VS%20PC%20VS%20MOBILE%20MOCK%20SITE%201-rLM9zZm1.png";
-const fieldImg = "/assets/field-CVNL-Tsb.jpg";
 function Eyebrow({ n, label }) {
   return null;
 }
@@ -571,7 +552,7 @@ function Industrial() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "section",
     {
-      id: "diagnostica",
+      id: "sobre-nos",
       ref,
       className: "reveal py-28 lg:py-36 bg-secondary/40 relative overflow-hidden",
       children: [
@@ -771,7 +752,8 @@ function Footer() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#pilares", className: "hover:text-cyan-electric transition-colors", children: "Pilares" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#resultado", className: "hover:text-cyan-electric transition-colors", children: "Resultados" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#beneficios", className: "hover:text-cyan-electric transition-colors", children: "Benefícios" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#contato", className: "hover:text-cyan-electric transition-colors", children: "Contato" }) })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#contato", className: "hover:text-cyan-electric transition-colors", children: "Contato" }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/contato", className: "hover:text-cyan-electric transition-colors", children: "Portal de contato" }) })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [

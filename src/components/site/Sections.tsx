@@ -576,7 +576,7 @@ export function Industrial() {
   ];
   return (
     <section
-      id="diagnostica"
+      id="sobre-nos"
       ref={ref}
       className="reveal py-28 lg:py-36 bg-secondary/40 relative overflow-hidden"
     >
@@ -879,6 +879,7 @@ export function Footer() {
             <li><a href="#resultado" className="hover:text-cyan-electric transition-colors">Resultados</a></li>
             <li><a href="#beneficios" className="hover:text-cyan-electric transition-colors">Benefícios</a></li>
             <li><a href="#contato" className="hover:text-cyan-electric transition-colors">Contato</a></li>
+            <li><a href="/contato" className="hover:text-cyan-electric transition-colors">Portal de contato</a></li>
           </ul>
         </div>
         <div>

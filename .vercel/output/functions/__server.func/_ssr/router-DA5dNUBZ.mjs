@@ -13,7 +13,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-CpgvNfF7.css";
+const appCss = "/assets/styles-Cf2AeQ9V.css";
 function NotFoundComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-7xl font-bold text-foreground", children: "404" }),
@@ -29,7 +29,7 @@ function NotFoundComponent() {
     ) })
   ] }) });
 }
-const Route$1 = createRootRoute({
+const Route$2 = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -70,7 +70,19 @@ function RootShell({ children }) {
 function RootComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {});
 }
-const $$splitComponentImporter = () => import("./index-BW3e8Td5.mjs");
+const $$splitComponentImporter$1 = () => import("./contato-B_8BTSoR.mjs");
+const Route$1 = createFileRoute("/contato")({
+  head: () => ({
+    meta: [{
+      title: "CCA — Portal de contato técnico"
+    }, {
+      name: "description",
+      content: "Entrada técnica para construtoras, incorporadoras e indústria. Leads qualificados e conversas sobre pós-obra, garantia predial e inspeção."
+    }]
+  }),
+  component: lazyRouteComponent($$splitComponentImporter$1, "component")
+});
+const $$splitComponentImporter = () => import("./index-Cd3H3OdT.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{
@@ -102,15 +114,21 @@ const Route = createFileRoute("/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });
+const ContatoRoute = Route$1.update({
+  id: "/contato",
+  path: "/contato",
+  getParentRoute: () => Route$2
+});
 const IndexRoute = Route.update({
   id: "/",
   path: "/",
-  getParentRoute: () => Route$1
+  getParentRoute: () => Route$2
 });
 const rootRouteChildren = {
-  IndexRoute
+  IndexRoute,
+  ContatoRoute
 };
-const routeTree = Route$1._addFileChildren(rootRouteChildren)._addFileTypes();
+const routeTree = Route$2._addFileChildren(rootRouteChildren)._addFileTypes();
 function DefaultErrorComponent({ error, reset }) {
   const router = useRouter();
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [

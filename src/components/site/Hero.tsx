@@ -1,4 +1,4 @@
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-building.jpg";
 
 export function Hero() {
   return (
@@ -10,8 +10,8 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={heroBg}
-          alt="Estrutura de torre em construção ao crepúsculo, vista cinemática"
-          className="w-full h-full object-cover"
+          alt="Fachada em close de um prédio de alto padrão com pele de vidro, nitidez na arquitetura"
+          className="w-full h-full object-cover object-center"
           width={1920}
           height={1080}
           fetchPriority="high"
@@ -19,11 +19,11 @@ export function Hero() {
       </div>
 
       {/* Layered overlays — deep navy + cyan glow + technical grid */}
-      <div className="absolute inset-0 z-[1] bg-deep/52" />
+      <div className="absolute inset-0 z-[1] bg-deep/76" />
       <div className="absolute inset-0 z-[1] gradient-hero pointer-events-none" />
-      <div className="absolute inset-0 z-[1] gradient-aurora opacity-75 pointer-events-none" />
+      <div className="absolute inset-0 z-[1] gradient-aurora opacity-92 pointer-events-none" />
       <div
-        className="absolute inset-0 z-[1] grid-bg-dark opacity-28 pointer-events-none"
+        className="absolute inset-0 z-[1] grid-bg-dark opacity-44 pointer-events-none"
         style={{ animation: "grid-pan 24s linear infinite" }}
       />
       {/* Section divider */}
