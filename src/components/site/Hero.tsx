@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img
           src={heroBg}
-          alt="Fachada em close de um prédio de alto padrão com pele de vidro, nitidez na arquitetura"
+          alt="Torres corporativas em vidro, vista em ângulo baixo com reflexos e linhas geométricas"
           className="w-full h-full object-cover object-center"
           width={1920}
           height={1080}

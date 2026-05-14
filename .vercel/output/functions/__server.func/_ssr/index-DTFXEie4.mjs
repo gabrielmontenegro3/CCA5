@@ -14,7 +14,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const heroBg = "/assets/hero-building-Hy3RM4S0.jpg";
+const heroBg = "/assets/hero-building-DeDSwIUd.jpg";
 function Hero() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "section",
@@ -26,8 +26,8 @@ function Hero() {
           "img",
           {
             src: heroBg,
-            alt: "Prédio moderno com fachada em vidro, enquadramento em perspectiva com o céu",
-            className: "w-full h-full object-cover",
+            alt: "Torres corporativas em vidro, vista em ângulo baixo com reflexos e linhas geométricas",
+            className: "w-full h-full object-cover object-center",
             width: 1920,
             height: 1080,
             fetchPriority: "high"
