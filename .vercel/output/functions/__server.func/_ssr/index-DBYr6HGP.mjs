@@ -1,5 +1,5 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
-import { N as Navbar, c as cn, f as fieldImg, i as industrialImg, l as logoCCA } from "./utils-DAycCeuN.mjs";
+import { N as Navbar, c as cn, f as fieldImg, i as industrialImg, l as logoCCA } from "./utils-DxbC-_0b.mjs";
 import "../_libs/tanstack__react-router.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
@@ -17,6 +17,9 @@ import "../_libs/isbot.mjs";
 import "../_libs/clsx.mjs";
 import "../_libs/tailwind-merge.mjs";
 const MAIN_NAV_HEIGHT = "4rem";
+const MAIN_NAV_HEIGHT_PX = 64;
+const SECTION_NAV_HEIGHT_PX = 36;
+const SITE_HEADER_OFFSET_PX = MAIN_NAV_HEIGHT_PX + SECTION_NAV_HEIGHT_PX;
 const SITE_SECTIONS = [
   { id: "top", label: "Início" },
   { id: "problema", label: "Problema" },
@@ -44,7 +47,7 @@ function SectionNav() {
         }
       },
       {
-        rootMargin: `-${MAIN_NAV_HEIGHT} 0px -55% 0px`,
+        rootMargin: `-${SITE_HEADER_OFFSET_PX}px 0px -55% 0px`,
         threshold: [0, 0.15, 0.35, 0.55]
       }
     );
@@ -57,7 +60,7 @@ function SectionNav() {
       "aria-label": "Atalhos das seções",
       className: "fixed inset-x-0 z-40 border-b border-cream/10 bg-deep/88 backdrop-blur-xl",
       style: { top: MAIN_NAV_HEIGHT },
-      children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-9 flex items-center gap-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden", children: SITE_SECTIONS.map(({ id, label }) => {
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-9 overflow-x-auto flex justify-center [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex h-full items-center justify-center gap-0.5 sm:gap-1 px-4 sm:px-6 lg:px-10", children: SITE_SECTIONS.map(({ id, label }) => {
         const isActive = activeId === id;
         return /* @__PURE__ */ jsxRuntimeExports.jsx(
           "a",
@@ -72,7 +75,7 @@ function SectionNav() {
           },
           id
         );
-      }) })
+      }) }) })
     }
   );
 }
@@ -799,17 +802,10 @@ function Cta() {
 }
 function Footer() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "border-t border-border py-14 bg-deep text-cream", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-3 gap-10 items-start", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-2 gap-10 items-start", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoCCA, alt: "CCA", className: "h-12 w-auto" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-sm text-cream/65 max-w-xs", children: "Gestão técnica de pós-obra com controle, rastreabilidade e decisões seguras." })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55 mb-3", children: "Navegação" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-2 text-sm", children: [
-          SITE_SECTIONS.map(({ id, label }) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: `#${id}`, className: "hover:text-cyan-electric transition-colors", children: label }) }, id)),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/contato", className: "hover:text-cyan-electric transition-colors", children: "Portal de contato" }) })
-        ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55 mb-3", children: "Contato" }),

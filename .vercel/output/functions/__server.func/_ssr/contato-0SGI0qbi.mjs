@@ -1,6 +1,6 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { N as Navbar, f as fieldImg, i as industrialImg, c as cn, l as logoCCA } from "./utils-DAycCeuN.mjs";
+import { N as Navbar, f as fieldImg, i as industrialImg, c as cn, l as logoCCA } from "./utils-DxbC-_0b.mjs";
 import { S as Slot } from "../_libs/radix-ui__react-slot.mjs";
 import { c as cva } from "../_libs/class-variance-authority.mjs";
 import { C as Checkbox$1, a as CheckboxIndicator } from "../_libs/radix-ui__react-checkbox.mjs";
@@ -542,7 +542,7 @@ function IndustriaFormWizard({
 }
 function ContatoPage() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-dvh bg-background text-foreground", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, { solid: true }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("main", { className: "pt-16", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ContatoPortal, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "border-t border-border py-10 bg-secondary/30", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-7xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/", className: "font-display text-foreground hover:text-cyan-electric transition-colors", children: "← Voltar ao site" }),
