@@ -19,7 +19,7 @@ export const Route = createFileRoute("/contato")({
 function ContatoPage() {
   return (
     <div className="min-h-dvh bg-background text-foreground">
-      <Navbar />
+      <Navbar solid />
       <main className="pt-16">
         <ContatoPortal />
       </main>

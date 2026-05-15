@@ -13,7 +13,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-BY5BiWvC.css";
+const appCss = "/assets/styles-Bdf3Anyh.css";
 function NotFoundComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-7xl font-bold text-foreground", children: "404" }),
@@ -70,7 +70,7 @@ function RootShell({ children }) {
 function RootComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {});
 }
-const $$splitComponentImporter$1 = () => import("./contato-B_8BTSoR.mjs");
+const $$splitComponentImporter$1 = () => import("./contato-CQ_mBIJ9.mjs");
 const Route$1 = createFileRoute("/contato")({
   head: () => ({
     meta: [{
@@ -82,7 +82,7 @@ const Route$1 = createFileRoute("/contato")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-DTFXEie4.mjs");
+const $$splitComponentImporter = () => import("./index-C75HTODv.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

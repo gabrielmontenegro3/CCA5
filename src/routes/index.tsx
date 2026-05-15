@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
+import { SectionNav } from "@/components/site/SectionNav";
 import { Hero } from "@/components/site/Hero";
 import {
   Problema,
@@ -54,6 +55,7 @@ function Index() {
   return (
     <div className="min-h-dvh bg-background text-foreground">
       <Navbar />
+      <SectionNav />
       <main>
         <Hero />
         <Problema />

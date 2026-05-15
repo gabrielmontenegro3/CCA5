@@ -856,7 +856,7 @@ export function AreaCliente() {
 export function Footer() {
   return (
     <footer className="border-t border-border py-14 bg-deep text-cream">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-3 gap-10 items-start">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid sm:grid-cols-2 gap-10 items-start">
         <div>
           <div className="flex items-center gap-3">
             <img src={logoCCA} alt="CCA" className="h-12 w-auto" />
@@ -865,22 +865,6 @@ export function Footer() {
             Gestão técnica de pós-obra com controle, rastreabilidade e
             decisões seguras.
           </p>
-        </div>
-        <div>
-          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55 mb-3">
-            Navegação
-          </div>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#top" className="hover:text-cyan-electric transition-colors">Hero Inicial</a></li>
-            <li><a href="#problema" className="hover:text-cyan-electric transition-colors">Problema</a></li>
-            <li><a href="#solucao" className="hover:text-cyan-electric transition-colors">Solução</a></li>
-            <li><a href="#fluxo" className="hover:text-cyan-electric transition-colors">Como Funciona</a></li>
-            <li><a href="#pilares" className="hover:text-cyan-electric transition-colors">Pilares</a></li>
-            <li><a href="#resultado" className="hover:text-cyan-electric transition-colors">Resultados</a></li>
-            <li><a href="#beneficios" className="hover:text-cyan-electric transition-colors">Benefícios</a></li>
-            <li><a href="#contato" className="hover:text-cyan-electric transition-colors">Contato</a></li>
-            <li><a href="/contato" className="hover:text-cyan-electric transition-colors">Portal de contato</a></li>
-          </ul>
         </div>
         <div>
           <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55 mb-3">

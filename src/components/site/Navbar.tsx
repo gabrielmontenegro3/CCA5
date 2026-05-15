@@ -2,23 +2,30 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import logoCCA from "@/assets/ChatGPT Image 11 de mai. de 2026, 15_25_03 (1).png";
 
-export function Navbar() {
+type NavbarProps = {
+  /** Mantém o navbar sempre no estilo escuro (ex.: /contato), sem transparência nem blur sobre fundo claro. */
+  solid?: boolean;
+};
+
+const solidClass = "bg-deep border-b border-cream/10";
+const scrolledClass = "bg-deep/80 backdrop-blur-xl border-b border-cream/10";
+
+export function Navbar({ solid = false }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if (solid) return;
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [solid]);
+
+  const headerClass = solid ? solidClass : scrolled ? scrolledClass : "bg-transparent";
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-deep/80 backdrop-blur-xl border-b border-cream/10"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${headerClass}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 grid grid-cols-[1fr_auto_1fr] items-center gap-3 sm:gap-5 lg:gap-8">
         <div className="flex justify-end items-center gap-3 sm:gap-5 min-w-0">

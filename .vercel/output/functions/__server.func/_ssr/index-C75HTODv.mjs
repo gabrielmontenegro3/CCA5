@@ -1,5 +1,5 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
-import { N as Navbar, f as fieldImg, i as industrialImg, l as logoCCA } from "./industrial-DbXijkji.mjs";
+import { N as Navbar, c as cn, f as fieldImg, i as industrialImg, l as logoCCA } from "./utils-DAycCeuN.mjs";
 import "../_libs/tanstack__react-router.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
@@ -14,13 +14,75 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
+import "../_libs/clsx.mjs";
+import "../_libs/tailwind-merge.mjs";
+const MAIN_NAV_HEIGHT = "4rem";
+const SITE_SECTIONS = [
+  { id: "top", label: "Início" },
+  { id: "problema", label: "Problema" },
+  { id: "solucao", label: "Solução" },
+  { id: "pilares", label: "Pilares" },
+  { id: "fluxo", label: "Fluxo" },
+  { id: "beneficios", label: "Benefícios" },
+  { id: "sobre-nos", label: "Sobre nós" },
+  { id: "confidencialidade", label: "Confidencialidade" },
+  { id: "sistema", label: "Sistema" },
+  { id: "contato", label: "Contato" }
+];
+function SectionNav() {
+  const [activeId, setActiveId] = reactExports.useState(SITE_SECTIONS[0].id);
+  reactExports.useEffect(() => {
+    const sections = SITE_SECTIONS.map(({ id }) => document.getElementById(id)).filter(
+      (el) => el !== null
+    );
+    if (sections.length === 0) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (visible[0]?.target.id) {
+          setActiveId(visible[0].target.id);
+        }
+      },
+      {
+        rootMargin: `-${MAIN_NAV_HEIGHT} 0px -55% 0px`,
+        threshold: [0, 0.15, 0.35, 0.55]
+      }
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "nav",
+    {
+      "aria-label": "Atalhos das seções",
+      className: "fixed inset-x-0 z-40 border-b border-cream/10 bg-deep/88 backdrop-blur-xl",
+      style: { top: MAIN_NAV_HEIGHT },
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-9 flex items-center gap-1 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden", children: SITE_SECTIONS.map(({ id, label }) => {
+        const isActive = activeId === id;
+        return /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "a",
+          {
+            href: `#${id}`,
+            className: cn(
+              "shrink-0 px-3 py-1 rounded-md font-mono text-[10px] uppercase tracking-[0.18em] transition-colors whitespace-nowrap",
+              isActive ? "text-cyan-electric bg-cream/10" : "text-cream/55 hover:text-cream/90 hover:bg-cream/5"
+            ),
+            "aria-current": isActive ? "location" : void 0,
+            children: label
+          },
+          id
+        );
+      }) })
+    }
+  );
+}
 const heroBg = "/assets/hero-building-DeDSwIUd.jpg";
 function Hero() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "section",
     {
       id: "top",
-      className: "relative min-h-dvh pt-16 pb-16 overflow-hidden grain text-cream bg-deep isolate",
+      className: "relative min-h-dvh pt-[6.25rem] pb-16 overflow-hidden grain text-cream bg-deep isolate scroll-mt-[6.25rem]",
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 z-0", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
           "img",
@@ -745,14 +807,7 @@ function Footer() {
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-mono text-[10px] uppercase tracking-[0.2em] text-cream/55 mb-3", children: "Navegação" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "space-y-2 text-sm", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#top", className: "hover:text-cyan-electric transition-colors", children: "Hero Inicial" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#problema", className: "hover:text-cyan-electric transition-colors", children: "Problema" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#solucao", className: "hover:text-cyan-electric transition-colors", children: "Solução" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#fluxo", className: "hover:text-cyan-electric transition-colors", children: "Como Funciona" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#pilares", className: "hover:text-cyan-electric transition-colors", children: "Pilares" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#resultado", className: "hover:text-cyan-electric transition-colors", children: "Resultados" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#beneficios", className: "hover:text-cyan-electric transition-colors", children: "Benefícios" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#contato", className: "hover:text-cyan-electric transition-colors", children: "Contato" }) }),
+          SITE_SECTIONS.map(({ id, label }) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: `#${id}`, className: "hover:text-cyan-electric transition-colors", children: label }) }, id)),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "/contato", className: "hover:text-cyan-electric transition-colors", children: "Portal de contato" }) })
         ] })
       ] }),
@@ -778,6 +833,7 @@ function Footer() {
 function Index() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-dvh bg-background text-foreground", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(SectionNav, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Problema, {}),

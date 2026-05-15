@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-dvh pt-16 pb-16 overflow-hidden grain text-cream bg-deep isolate"
+      className="relative min-h-dvh pt-[6.25rem] pb-16 overflow-hidden grain text-cream bg-deep isolate scroll-mt-[6.25rem]"
     >
       {/* Background image */}
       <div className="absolute inset-0 z-0">
